@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  @media (min-width: 640px) {
+    .card { flex-direction: row; }
+  }
+  .photo-section {
+    flex: 1;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .photo-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  .info-section {
+    flex: 2;
+    padding: 2rem;
+  }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #2d3436; }
+  .subtitle { color: #636e72; margin-bottom: 1.5rem; font-size: 1.1rem; }
+  .bio { color: #2d3436; line-height: 1.6; margin-bottom: 1.5rem; }
+  h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: #2d3436; }
+  .services { list-style: none; margin-bottom: 1.5rem; }
+  .services li {
+    padding: 0.5rem 0;
+    color: #636e72;
+    border-bottom: 1px solid #dfe6e9;
+  }
+  .services li:last-child { border-bottom: none; }
+  .socials { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .socials a {
+    text-decoration: none;
+    color: #0984e3;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #0984e3;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  .socials a:hover { background: #0984e3; color: #fff; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="photo-section">
+      <img src="https://via.placeholder.com/400x400/0984e3/ffffff?text=Your+Photo" alt="Profile photo">
+    </div>
+    <div class="info-section">
+      <h1>Your Name</h1>
+      <p class="subtitle">Web Developer & Designer</p>
+      <p class="bio">
+        Hello! I'm a passionate professional dedicated to building clean, modern, and user-friendly digital experiences. I love turning ideas into reality through code and design.
+      </p>
+      <h2>Services</h2>
+      <ul class="services">
+        <li>Web Design & Development</li>
+        <li>UI/UX Design</li>
+        <li>Responsive Websites</li>
+        <li>Consulting</li>
+      </ul>
+      <div class="socials">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        <a href="mailto:you@example.com">Email</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
