@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Home</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+  }
+  nav {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3436;
+    text-decoration: none;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  nav .nav-links a {
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  nav .nav-links a:hover,
+  nav .nav-links a.active {
+    background: #0984e3;
+    color: #fff;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+  }
+  .hero .subtitle {
+    font-size: 1.3rem;
+    color: #636e72;
+    margin-bottom: 2rem;
+  }
+  .hero .cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn {
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .btn-primary {
+    background: #0984e3;
+    color: #fff;
+    border: 2px solid #0984e3;
+  }
+  .btn-primary:hover {
+    background: #74b9ff;
+    border-color: #74b9ff;
+  }
+  .btn-outline {
+    background: transparent;
+    color: #0984e3;
+    border: 2px solid #0984e3;
+  }
+  .btn-outline:hover {
+    background: #0984e3;
+    color: #fff;
+  }
+  .projects-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
+  .project-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .project-card .card-body {
+    padding: 1.5rem;
+  }
+  .project-card h3 {
+    font-size: 1.25rem;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+  }
+  .project-card p {
+    color: #636e72;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .project-card a {
+    text-decoration: none;
+    color: #0984e3;
+    font-weight: 600;
+  }
+  .assets-section {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
+  .assets-section h2 {
+    font-size: 1.5rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .asset-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .asset-links a {
+    text-decoration: none;
+    color: #0984e3;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #0984e3;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  .asset-links a:hover {
+    background: #0984e3;
+    color: #fff;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #636e72;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="project1.html">Project 1</a></li>
+      <li><a href="project2.html">Project 2</a></li>
+      <li><a href="project3.html">Project 3</a></li>
+      <li><a href="project4.html">Project 4</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p class="subtitle">Web Developer & Designer</p>
+    <p class="bio" style="max-width:600px; color:#636e72; line-height:1.6; margin-bottom:2rem;">
+      I build clean, modern, and user-friendly digital experiences. Explore my work and learn more about what I do.
+    </p>
+    <div class="cta">
+      <a href="project1.html" class="btn btn-primary">View Projects</a>
+      <a href="about.html" class="btn btn-outline">Learn About Me</a>
+    </div>
+  </section>
+  <section class="projects-preview">
+    <div class="project-card">
+      <img src="assets/images/project1-placeholder.png" alt="Project 1">
+      <div class="card-body">
+        <h3>Project 1</h3>
+        <p>A brief description of the first project showcasing key work and technologies used.</p>
+        <a href="project1.html">View Project &rarr;</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="assets/images/project2-placeholder.png" alt="Project 2">
+      <div class="card-body">
+        <h3>Project 2</h3>
+        <p>A brief description of the second project showcasing key work and technologies used.</p>
+        <a href="project2.html">View Project &rarr;</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="assets/images/project3-placeholder.png" alt="Project 3">
+      <div class="card-body">
+        <h3>Project 3</h3>
+        <p>A brief description of the third project showcasing key work and technologies used.</p>
+        <a href="project3.html">View Project &rarr;</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="assets/images/project4-placeholder.png" alt="Project 4">
+      <div class="card-body">
+        <h3>Project 4</h3>
+        <p>A brief description of the fourth project showcasing key work and technologies used.</p>
+        <a href="project4.html">View Project &rarr;</a>
+      </div>
+    </div>
+  </section>
+  <section class="assets-section">
+    <h2>Asset Library</h2>
+    <div class="asset-links">
+      <a href="assets/images/">Images</a>
+      <a href="assets/documents/">Documents</a>
+      <a href="assets/gifs/">GIFs</a>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
