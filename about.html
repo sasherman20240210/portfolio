@@ -49,6 +49,19 @@
     background: #0984e3;
     color: #fff;
   }
+  .about-hero {
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+  }
+  .about-hero img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+    display: block;
+  }
   .card {
     background: #fff;
     border-radius: 16px;
@@ -56,31 +69,9 @@
     max-width: 800px;
     width: 100%;
     margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
   }
-  @media (min-width: 640px) {
-    .card { flex-direction: row; }
-  }
-  .photo-section {
-    flex: 1;
-    background: #e9ecef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-  .photo-section img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  }
   .info-section {
-    flex: 2;
     padding: 2rem;
   }
   h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #2d3436; }
@@ -121,6 +112,9 @@
       gap: 0.75rem;
       width: 100%;
     }
+    .about-hero {
+      padding: 0 1.5rem;
+    }
     .card {
       width: calc(100% - 3rem);
     }
@@ -141,17 +135,19 @@
       padding: 0.45rem 0.75rem;
       font-size: 0.95rem;
     }
+    .about-hero {
+      margin: 1.5rem auto 0;
+      padding: 0 1rem;
+    }
+    .about-hero img {
+      max-height: 260px;
+    }
     .card {
       width: calc(100% - 2rem);
       margin: 1.5rem auto;
     }
-    .photo-section,
     .info-section {
       padding: 1.5rem;
-    }
-    .photo-section img {
-      width: 160px;
-      height: 160px;
     }
     h1 {
       font-size: 1.75rem;
@@ -180,10 +176,10 @@
       <li><a href="about.html" class="active">About</a></li>
     </ul>
   </nav>
+  <section class="about-hero">
+    <img src="assets/images/about/arboretum columns.jpg" alt="Arboretum columns">
+  </section>
   <div class="card">
-    <div class="photo-section">
-      <img src="assets/images/about/profile-placeholder.png" alt="Profile photo">
-    </div>
     <div class="info-section">
       <h1>Hello World!</h1>
       <p class="subtitle">Web Developer & Designer</p>
