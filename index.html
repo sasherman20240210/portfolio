@@ -72,108 +72,42 @@
     line-height: 1.6;
     margin-bottom: 2rem;
   }
-  .hero .cta {
+  .projects-preview {
     display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  .btn {
-    text-decoration: none;
-    padding: 0.75rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-  }
-  .btn-primary {
-    background: #0984e3;
-    color: #fff;
-    border: 2px solid #0984e3;
-  }
-  .btn-primary:hover {
-    background: #74b9ff;
-    border-color: #74b9ff;
-  }
-  .btn-outline {
-    background: transparent;
-    color: #0984e3;
-    border: 2px solid #0984e3;
-  }
-  .btn-outline:hover {
-    background: #0984e3;
-    color: #fff;
-  }
-  .projects-preview {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1100px;
+    max-width: 1280px;
     margin: 3rem auto;
     padding: 0 2rem;
   }
   .project-card {
+    display: block;
+    flex: 0 1 360px;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     overflow: hidden;
+    text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.18);
   }
   .project-card img {
     width: 100%;
-    height: 200px;
+    height: 320px;
     object-fit: cover;
   }
   .project-card .card-body {
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem 1.4rem;
   }
   .project-card h3 {
     font-size: 1.25rem;
     color: #2d3436;
-    margin-bottom: 0.5rem;
-  }
-  .project-card p {
-    color: #636e72;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-  }
-  .project-card a {
-    text-decoration: none;
-    color: #0984e3;
-    font-weight: 600;
-  }
-  .assets-section {
-    max-width: 1100px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-  }
-  .assets-section h2 {
-    font-size: 1.5rem;
-    color: #2d3436;
-    margin-bottom: 1rem;
+    margin: 0;
     text-align: center;
-  }
-  .asset-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .asset-links a {
-    text-decoration: none;
-    color: #0984e3;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid #0984e3;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-  }
-  .asset-links a:hover {
-    background: #0984e3;
-    color: #fff;
   }
   footer {
     text-align: center;
@@ -201,52 +135,32 @@
     <p class="bio">
       I build clean, modern, and user-friendly digital experiences. Explore my work and learn more about what I do.
     </p>
-    <div class="cta">
-      <a href="caribou.html" class="btn btn-primary">View Projects</a>
-      <a href="about.html" class="btn btn-outline">Learn About Me</a>
-    </div>
   </section>
   <section class="projects-preview">
-    <div class="project-card">
-      <img src="assets/images/caribou-placeholder.png" alt="Caribou">
+    <a class="project-card" href="caribou.html">
+      <img src="assets/images/projects/caribou/hero-placeholder.png" alt="Caribou">
       <div class="card-body">
         <h3>Caribou</h3>
-        <p>A brief description of the first project showcasing key work and technologies used.</p>
-        <a href="caribou.html">View Project &rarr;</a>
       </div>
-    </div>
-    <div class="project-card">
-      <img src="assets/images/oportun-placeholder.png" alt="Oportun">
+    </a>
+    <a class="project-card" href="oportun.html">
+      <img src="assets/images/projects/oportun/Oportun cover image.png" alt="Oportun">
       <div class="card-body">
         <h3>Oportun</h3>
-        <p>A brief description of the second project showcasing key work and technologies used.</p>
-        <a href="oportun.html">View Project &rarr;</a>
       </div>
-    </div>
-    <div class="project-card">
-      <img src="assets/images/geico-placeholder.png" alt="GEICO">
+    </a>
+    <a class="project-card" href="geico.html">
+      <img src="assets/images/projects/geico/GEICO cover image.png" alt="GEICO">
       <div class="card-body">
         <h3>GEICO</h3>
-        <p>A brief description of the third project showcasing key work and technologies used.</p>
-        <a href="geico.html">View Project &rarr;</a>
       </div>
-    </div>
-    <div class="project-card">
-      <img src="assets/images/personal-projects-placeholder.png" alt="Personal Projects">
+    </a>
+    <a class="project-card" href="personal-projects.html">
+      <img src="assets/images/projects/personal-projects/hero-placeholder.png" alt="Personal Projects">
       <div class="card-body">
         <h3>Personal Projects</h3>
-        <p>A brief description of the fourth project showcasing key work and technologies used.</p>
-        <a href="personal-projects.html">View Project &rarr;</a>
       </div>
-    </div>
-  </section>
-  <section class="assets-section">
-    <h2>Asset Library</h2>
-    <div class="asset-links">
-      <a href="assets/images/">Images</a>
-      <a href="assets/documents/">Documents</a>
-      <a href="assets/gifs/">GIFs</a>
-    </div>
+    </a>
   </section>
   <footer>
     <p>&copy; 2026 Your Name. All rights reserved.</p>
