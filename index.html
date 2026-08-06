@@ -18,6 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -31,6 +33,7 @@
   nav .nav-links {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
     list-style: none;
   }
   nav .nav-links a {
@@ -114,6 +117,79 @@
     padding: 2rem;
     color: #636e72;
     font-size: 0.9rem;
+  }
+  @media (max-width: 900px) {
+    nav {
+      padding: 1rem 1.5rem;
+      justify-content: center;
+    }
+    nav .nav-links {
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+    }
+    .hero {
+      padding: 3rem 1.5rem;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+    .projects-preview {
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+    }
+    .project-card {
+      flex-basis: 320px;
+    }
+    .project-card img {
+      height: 280px;
+    }
+  }
+  @media (max-width: 640px) {
+    nav {
+      padding: 1rem;
+    }
+    nav .logo {
+      width: 100%;
+      text-align: center;
+      font-size: 1.35rem;
+    }
+    nav .nav-links {
+      gap: 0.5rem;
+    }
+    nav .nav-links a {
+      padding: 0.45rem 0.75rem;
+      font-size: 0.95rem;
+    }
+    .hero {
+      padding: 2.5rem 1rem 2rem;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero .subtitle {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+    .hero .bio {
+      font-size: 0.98rem;
+      margin-bottom: 0;
+    }
+    .projects-preview {
+      gap: 1.25rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .project-card {
+      flex-basis: 100%;
+      max-width: 420px;
+    }
+    .project-card img {
+      height: 240px;
+    }
+    .project-card .card-body {
+      padding: 1rem 1.25rem 1.15rem;
+    }
   }
 </style>
 </head>

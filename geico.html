@@ -18,6 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -31,6 +33,7 @@
   nav .nav-links {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
     list-style: none;
   }
   nav .nav-links a {
@@ -46,82 +49,273 @@
     background: #0984e3;
     color: #fff;
   }
-  .project-hero {
+  .case-study {
     max-width: 1100px;
     margin: 2rem auto;
     padding: 0 2rem;
   }
-  .project-hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  }
-  .project-content {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 2rem;
+  .case-study-hero {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(260px, 360px) 1fr;
     gap: 2rem;
+    align-items: start;
   }
-  @media (max-width: 768px) {
-    .project-content { grid-template-columns: 1fr; }
-  }
-  .project-text {
+  .hero-copy {
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     padding: 2rem;
   }
-  .project-text h1 {
-    font-size: 2rem;
+  .hero-copy h1 {
+    font-size: 2.4rem;
     color: #2d3436;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
-  .project-text .tag {
+  .hero-copy .eyebrow {
     display: inline-block;
     background: #0984e3;
     color: #fff;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
   }
-  .project-text p {
-    color: #636e72;
+  .hero-copy .summary {
+    color: #4f5b62;
     line-height: 1.7;
+    font-size: 1.05rem;
     margin-bottom: 1rem;
   }
-  .project-gallery {
+  .hero-copy .focus {
+    color: #636e72;
+    line-height: 1.6;
+  }
+  .comparison-panel {
+    background: rgba(255,255,255,0.7);
+    border-radius: 18px;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px);
+  }
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .comparison-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  .comparison-card .label {
+    display: block;
+    padding: 0.85rem 1rem 0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0984e3;
+  }
+  .media-frame {
+    background: #eef2f5;
+  }
+  .media-visual {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    display: block;
+    background: #eef2f5;
+    object-fit: contain;
+  }
+  .video-fallback[hidden] {
+    display: none;
+  }
+  .comparison-card p {
+    padding: 0.9rem 1rem 1rem;
+    color: #636e72;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .snapshot-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 1.25rem;
+  }
+  .snapshot-card .label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0984e3;
+    margin-bottom: 0.65rem;
+  }
+  .snapshot-card p {
+    color: #2d3436;
+    line-height: 1.5;
+  }
+  .story-grid {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+    gap: 2rem;
+  }
+  .story-panel {
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     padding: 2rem;
   }
-  .project-gallery h2 {
-    font-size: 1.25rem;
+  .story-panel h2,
+  .details-panel h2,
+  .differences-section h2 {
+    font-size: 1.35rem;
     color: #2d3436;
     margin-bottom: 1rem;
   }
-  .gallery-grid {
+  .story-block + .story-block {
+    margin-top: 1.5rem;
+  }
+  .story-block h3 {
+    font-size: 1rem;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+  }
+  .story-block p,
+  .details-list li,
+  .difference-card p {
+    color: #636e72;
+    line-height: 1.6;
+  }
+  .details-panel {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+  }
+  .details-list {
+    list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1rem;
   }
-  .gallery-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
+  .details-list li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e9ec;
+  }
+  .details-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .details-list strong {
+    display: block;
+    color: #2d3436;
+    margin-bottom: 0.3rem;
+  }
+  .differences-section {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  .differences-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .difference-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 1.4rem;
+  }
+  .difference-card h3 {
+    font-size: 1rem;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
   }
   footer {
     text-align: center;
     padding: 2rem;
     color: #636e72;
     font-size: 0.9rem;
+  }
+  @media (max-width: 900px) {
+    nav {
+      padding: 1rem 1.5rem;
+      justify-content: center;
+    }
+    nav .nav-links {
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+    }
+    .case-study,
+    .story-grid,
+    .differences-section {
+      padding: 0 1.5rem;
+    }
+    .case-study-hero,
+    .story-grid,
+    .snapshot-grid,
+    .differences-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 640px) {
+    nav {
+      padding: 1rem;
+    }
+    nav .logo {
+      width: 100%;
+      text-align: center;
+      font-size: 1.35rem;
+    }
+    nav .nav-links {
+      gap: 0.5rem;
+    }
+    nav .nav-links a {
+      padding: 0.45rem 0.75rem;
+      font-size: 0.95rem;
+    }
+    .case-study {
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+    .hero-copy {
+      padding: 1.5rem;
+    }
+    .hero-copy h1 {
+      font-size: 1.9rem;
+    }
+    .comparison-panel {
+      padding: 0.75rem;
+    }
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+    .media-visual {
+      aspect-ratio: 16 / 9;
+    }
+    .story-grid,
+    .differences-section {
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+      gap: 1.25rem;
+    }
+    .story-panel,
+    .details-panel,
+    .difference-card {
+      padding: 1.5rem;
+    }
   }
 </style>
 </head>
@@ -137,35 +331,157 @@
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
-  <section class="project-hero">
-    <img src="assets/images/projects/geico/hero-placeholder.png" alt="GEICO Hero">
-  </section>
-  <section class="project-content">
-    <div class="project-text">
-      <h1>GEICO</h1>
-      <span class="tag">Mobile App</span>
-      <p>
-        A detailed description of the third project. Explain the goals, challenges,
-        and outcomes. Describe the technologies and methodologies used throughout
-        the development process.
-      </p>
-      <p>
-        Highlight key achievements and results. Include metrics, user feedback,
-        or technical breakthroughs that made this project successful.
-      </p>
-    </div>
-    <div class="project-gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="assets/images/projects/geico/gallery-placeholder.png" alt="GEICO Gallery 1">
-        <img src="assets/images/projects/geico/gallery-placeholder.png" alt="GEICO Gallery 2">
-        <img src="assets/images/projects/geico/gallery-placeholder.png" alt="GEICO Gallery 3">
-        <img src="assets/images/projects/geico/gallery-placeholder.png" alt="GEICO Gallery 4">
+  <section class="case-study">
+    <div class="case-study-hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Chat Experience Comparison</span>
+        <h1>GEICO</h1>
+        <p class="summary">
+          A comparison-led look at two related chat flows where small differences in behavior and styling shape how responsive, useful, and trustworthy the experience feels.
+        </p>
+        <p class="focus">
+          The page keeps the motion front and center while breaking the narrative and supporting details into calmer, easy-to-scan sections below.
+        </p>
       </div>
+      <div class="comparison-panel">
+        <div class="comparison-grid">
+          <article class="comparison-card">
+            <span class="label">Flow A</span>
+            <div class="media-frame">
+              <video class="media-visual" controls muted playsinline preload="metadata" poster="assets/images/projects/geico/GEICO cover image.png">
+                <source src="assets/gifs/projects/geico/contact_us_service_directory_trimmed.mp4" type="video/mp4">
+              </video>
+              <img class="media-visual video-fallback" src="assets/images/projects/geico/GEICO cover image.png" alt="Flow A preview" hidden>
+            </div>
+            <p>A service-directory chat flow that shows how the experience frames support pathways, pacing, and the structure of the conversation.</p>
+          </article>
+          <article class="comparison-card">
+            <span class="label">Flow B</span>
+            <div class="media-frame">
+              <video class="media-visual" controls muted playsinline preload="metadata" poster="assets/images/projects/geico/GEICO cover image.png">
+                <source src="assets/gifs/projects/geico/contact_modal_payments_via_ecams_trimmed.mp4" type="video/mp4">
+              </video>
+              <img class="media-visual video-fallback" src="assets/images/projects/geico/GEICO cover image.png" alt="Flow B preview" hidden>
+            </div>
+            <p>A payments-focused contact modal that highlights a similar chat pattern with different styling cues and a distinct support path.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="snapshot-grid">
+      <article class="snapshot-card">
+        <span class="label">Problem</span>
+        <p>Related chat experiences can feel inconsistent when behavior and presentation diverge in small but visible ways.</p>
+      </article>
+      <article class="snapshot-card">
+        <span class="label">Focus</span>
+        <p>Compare interaction tone, response structure, and styling polish across two flows.</p>
+      </article>
+      <article class="snapshot-card">
+        <span class="label">Audience</span>
+        <p>Users looking for quick help or a guided next step inside a conversational support pattern.</p>
+      </article>
+      <article class="snapshot-card">
+        <span class="label">Outcome</span>
+        <p>Space reserved for task success, usage, satisfaction, or consistency metrics.</p>
+      </article>
+    </div>
+  </section>
+  <section class="story-grid">
+    <div class="story-panel">
+      <h2>Narrative</h2>
+      <div class="story-block">
+        <h3>Context</h3>
+        <p>
+          This comparison looks at two chat experiences designed around related user needs. Because the feature pattern is similar, the differences in behavior and styling are easier to notice and evaluate side by side.
+        </p>
+      </div>
+      <div class="story-block">
+        <h3>Challenge</h3>
+        <p>
+          Conversational interfaces can drift apart quickly. Even when the feature is recognizably the same, minor changes in pacing, message treatment, or supporting UI can change how clear and trustworthy the experience feels.
+        </p>
+      </div>
+      <div class="story-block">
+        <h3>Design Approach</h3>
+        <p>
+          The page is structured around direct comparison so readers can watch both flows, notice the interaction differences, and then use the written narrative to understand why those details matter.
+        </p>
+      </div>
+      <div class="story-block">
+        <h3>What Changed</h3>
+        <p>
+          Instead of treating the clips as a general gallery, the redesigned page frames them as two related flows with measurable contrast in chat behavior, visual styling, and overall conversational feel.
+        </p>
+      </div>
+    </div>
+    <aside class="details-panel">
+      <h2>Project Details</h2>
+      <ul class="details-list">
+        <li>
+          <strong>Primary Goal</strong>
+          Understand how interaction details change the perceived quality of the chat experience.
+        </li>
+        <li>
+          <strong>Comparison Lens</strong>
+          Behavior, message flow, styling consistency, and clarity of next steps.
+        </li>
+        <li>
+          <strong>Evidence Slot</strong>
+          Ready for task completion, deflection, or satisfaction metrics.
+        </li>
+        <li>
+          <strong>Reader Focus</strong>
+          What should be noticed while watching each flow and why those differences matter.
+        </li>
+        <li>
+          <strong>Team Notes</strong>
+          Useful area for ownership, timeline, tools, or test scope details.
+        </li>
+      </ul>
+    </aside>
+  </section>
+  <section class="differences-section">
+    <h2>Key Differences</h2>
+    <div class="differences-grid">
+      <article class="difference-card">
+        <h3>Response Rhythm</h3>
+        <p>One flow can feel quicker or more direct, which changes the perceived efficiency of the conversation.</p>
+      </article>
+      <article class="difference-card">
+        <h3>Visual Treatment</h3>
+        <p>Minor styling shifts influence how polished, consistent, and trustworthy the interaction feels at a glance.</p>
+      </article>
+      <article class="difference-card">
+        <h3>Guidance Quality</h3>
+        <p>The way each flow frames the next step affects how supported the user feels while moving through the chat.</p>
+      </article>
     </div>
   </section>
   <footer>
     <p>&copy; 2026 Your Name. All rights reserved.</p>
   </footer>
+  <script>
+    const showVideoFallback = (video) => {
+      const fallback = video.parentElement.querySelector('.video-fallback');
+      if (!fallback) return;
+      video.hidden = true;
+      fallback.hidden = false;
+    };
+
+    document.querySelectorAll('.comparison-card video').forEach((video) => {
+      const sources = video.querySelectorAll('source');
+      const fail = () => showVideoFallback(video);
+
+      video.addEventListener('error', fail);
+      sources.forEach((source) => source.addEventListener('error', fail));
+
+      window.setTimeout(() => {
+        if (video.error || video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) {
+          fail();
+        }
+      }, 1200);
+    });
+  </script>
 </body>
 </html>

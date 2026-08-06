@@ -18,6 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -31,6 +33,7 @@
   nav .nav-links {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
     list-style: none;
   }
   nav .nav-links a {
@@ -46,82 +49,270 @@
     background: #0984e3;
     color: #fff;
   }
-  .project-hero {
+  .case-study {
     max-width: 1100px;
     margin: 2rem auto;
     padding: 0 2rem;
   }
-  .project-hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  }
-  .project-content {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 2rem;
+  .case-study-hero {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(260px, 360px) 1fr;
     gap: 2rem;
+    align-items: start;
   }
-  @media (max-width: 768px) {
-    .project-content { grid-template-columns: 1fr; }
-  }
-  .project-text {
+  .hero-copy {
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     padding: 2rem;
   }
-  .project-text h1 {
-    font-size: 2rem;
+  .hero-copy h1 {
+    font-size: 2.4rem;
     color: #2d3436;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
-  .project-text .tag {
+  .hero-copy .eyebrow {
     display: inline-block;
     background: #0984e3;
     color: #fff;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
   }
-  .project-text p {
+  .hero-copy .summary {
+    color: #4f5b62;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+  .hero-copy .focus {
     color: #636e72;
     line-height: 1.6;
-    margin-bottom: 1rem;
   }
-  .project-gallery {
+  .comparison-panel {
+    background: rgba(255,255,255,0.7);
+    border-radius: 18px;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px);
+  }
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .comparison-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  .comparison-card .label {
+    display: block;
+    padding: 0.85rem 1rem 0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0984e3;
+  }
+  .comparison-card img {
+    width: 100%;
+    height: 460px;
+    object-fit: contain;
+    background: #f5f7fa;
+    padding: 1rem;
+  }
+  .comparison-card p {
+    padding: 0 1rem 1rem;
+    color: #636e72;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .snapshot-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 1.25rem;
+  }
+  .snapshot-card .label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0984e3;
+    margin-bottom: 0.65rem;
+  }
+  .snapshot-card p {
+    color: #2d3436;
+    line-height: 1.5;
+  }
+  .story-grid {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+    gap: 2rem;
+  }
+  .story-panel {
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     padding: 2rem;
   }
-  .project-gallery h2 {
-    font-size: 1.25rem;
+  .story-panel h2,
+  .details-panel h2,
+  .improvements-section h2 {
+    font-size: 1.35rem;
     color: #2d3436;
     margin-bottom: 1rem;
   }
-  .gallery-grid {
+  .story-block + .story-block {
+    margin-top: 1.5rem;
+  }
+  .story-block h3 {
+    font-size: 1rem;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+  }
+  .story-block p,
+  .details-list li,
+  .improvement-card p {
+    color: #636e72;
+    line-height: 1.6;
+  }
+  .details-panel {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+  }
+  .details-list {
+    list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1rem;
   }
-  .gallery-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
+  .details-list li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e9ec;
+  }
+  .details-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .details-list strong {
+    display: block;
+    color: #2d3436;
+    margin-bottom: 0.3rem;
+  }
+  .improvements-section {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  .improvements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .improvement-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 1.4rem;
+  }
+  .improvement-card h3 {
+    font-size: 1rem;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
   }
   footer {
     text-align: center;
     padding: 2rem;
     color: #636e72;
     font-size: 0.9rem;
+  }
+  @media (max-width: 900px) {
+    nav {
+      padding: 1rem 1.5rem;
+      justify-content: center;
+    }
+    nav .nav-links {
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+    }
+    .case-study,
+    .story-grid,
+    .improvements-section {
+      padding: 0 1.5rem;
+    }
+    .case-study-hero,
+    .story-grid,
+    .snapshot-grid,
+    .improvements-grid {
+      grid-template-columns: 1fr;
+    }
+    .comparison-card img {
+      height: 360px;
+    }
+  }
+  @media (max-width: 640px) {
+    nav {
+      padding: 1rem;
+    }
+    nav .logo {
+      width: 100%;
+      text-align: center;
+      font-size: 1.35rem;
+    }
+    nav .nav-links {
+      gap: 0.5rem;
+    }
+    nav .nav-links a {
+      padding: 0.45rem 0.75rem;
+      font-size: 0.95rem;
+    }
+    .case-study {
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+    .hero-copy {
+      padding: 1.5rem;
+    }
+    .hero-copy h1 {
+      font-size: 1.9rem;
+    }
+    .comparison-panel {
+      padding: 0.75rem;
+    }
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+    .comparison-card img {
+      height: 300px;
+    }
+    .story-grid,
+    .improvements-section {
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+      gap: 1.25rem;
+    }
+    .story-panel,
+    .details-panel,
+    .improvement-card {
+      padding: 1.5rem;
+    }
   }
 </style>
 </head>
@@ -130,38 +321,128 @@
     <a href="index.html" class="logo">Portfolio</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="caribou.html">Caribou</a></li>
+      <li><a href="caribou.html" class="active">Caribou</a></li>
       <li><a href="oportun.html">Oportun</a></li>
       <li><a href="geico.html">GEICO</a></li>
       <li><a href="personal-projects.html">Personal Projects</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
-  <section class="project-hero">
-    <img src="assets/images/projects/caribou/hero-placeholder.png" alt="Caribou Hero">
-  </section>
-  <section class="project-content">
-    <div class="project-text">
-      <h1>Caribou</h1>
-      <span class="tag">Web Development</span>
-      <p>
-        A detailed description of the first project. Explain the goals, challenges,
-        and outcomes. Describe the technologies and methodologies used throughout
-        the development process.
-      </p>
-      <p>
-        Highlight key achievements and results. Include metrics, user feedback,
-        or technical breakthroughs that made this project successful.
-      </p>
-    </div>
-    <div class="project-gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="assets/images/projects/caribou/gallery-placeholder.png" alt="Caribou Gallery 1">
-        <img src="assets/images/projects/caribou/gallery-placeholder.png" alt="Caribou Gallery 2">
-        <img src="assets/images/projects/caribou/gallery-placeholder.png" alt="Caribou Gallery 3">
-        <img src="assets/images/projects/caribou/gallery-placeholder.png" alt="Caribou Gallery 4">
+  <section class="case-study">
+    <div class="case-study-hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Offer Selection Redesign</span>
+        <h1>Caribou</h1>
+        <p class="summary">
+          Reframing the offer selection experience to make the next step feel clearer, more actionable, and easier to trust.
+        </p>
+        <p class="focus">
+          This page is structured as a comparison-led case study so the visual change is immediate, while the narrative and supporting data stay easy to scan below.
+        </p>
       </div>
+      <div class="comparison-panel">
+        <div class="comparison-grid">
+          <article class="comparison-card">
+            <span class="label">Before</span>
+            <img src="assets/images/projects/caribou/Offer selection page - Before.png" alt="Caribou offer selection page before redesign">
+            <p>An earlier version of the offer selection experience with heavier visual competition and a less guided decision path.</p>
+          </article>
+          <article class="comparison-card">
+            <span class="label">After</span>
+            <img src="assets/images/projects/caribou/Offer selection page - After.png" alt="Caribou offer selection page after redesign">
+            <p>A more focused flow with stronger hierarchy, clearer emphasis, and a calmer experience around offer choice.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="snapshot-grid">
+      <article class="snapshot-card">
+        <span class="label">Problem</span>
+        <p>Offer selection needed stronger clarity and a more confident path forward.</p>
+      </article>
+      <article class="snapshot-card">
+        <span class="label">Focus</span>
+        <p>Improve hierarchy, decision support, and visual emphasis around primary actions.</p>
+      </article>
+      <article class="snapshot-card">
+        <span class="label">Audience</span>
+        <p>Members comparing options and deciding what step to take next.</p>
+      </article>
+      <article class="snapshot-card">
+        <span class="label">Outcome</span>
+        <p>Space reserved for live metrics, qualitative feedback, or adoption lift.</p>
+      </article>
+    </div>
+  </section>
+  <section class="story-grid">
+    <div class="story-panel">
+      <h2>Narrative</h2>
+      <div class="story-block">
+        <h3>Context</h3>
+        <p>
+          This redesign centers on the moment a user has to evaluate and choose an offer. The goal is not just to make the interface look cleaner, but to make the decision feel more understandable and lower-friction.
+        </p>
+      </div>
+      <div class="story-block">
+        <h3>Challenge</h3>
+        <p>
+          The earlier experience asked users to process several competing elements at once. When information hierarchy is crowded in a choice-heavy flow, even small decisions can feel heavier than they need to.
+        </p>
+      </div>
+      <div class="story-block">
+        <h3>Design Approach</h3>
+        <p>
+          The redesign uses clearer emphasis, more deliberate spacing, and a calmer visual rhythm so the page guides the user toward the most important comparison and the next action without forcing extra effort.
+        </p>
+      </div>
+      <div class="story-block">
+        <h3>What Changed</h3>
+        <p>
+          The after state shows a more directed experience: stronger hierarchy, less visual noise, and more intentional separation between supporting information and the primary decision path.
+        </p>
+      </div>
+    </div>
+    <aside class="details-panel">
+      <h2>Project Details</h2>
+      <ul class="details-list">
+        <li>
+          <strong>Primary Goal</strong>
+          Make offer selection easier to understand at a glance.
+        </li>
+        <li>
+          <strong>Design Lens</strong>
+          Reduce cognitive load while increasing confidence in the next step.
+        </li>
+        <li>
+          <strong>Evidence Slot</strong>
+          Ready for completion rate, drop-off, or user feedback data.
+        </li>
+        <li>
+          <strong>Key Constraint</strong>
+          Improve clarity without losing important supporting context.
+        </li>
+        <li>
+          <strong>Team Notes</strong>
+          Useful place for timeline, collaborators, tools, or ownership notes.
+        </li>
+      </ul>
+    </aside>
+  </section>
+  <section class="improvements-section">
+    <h2>What Improved</h2>
+    <div class="improvements-grid">
+      <article class="improvement-card">
+        <h3>Clearer Hierarchy</h3>
+        <p>The most important information now lands first, reducing the need to search for the next step.</p>
+      </article>
+      <article class="improvement-card">
+        <h3>Simpler Decision Path</h3>
+        <p>The interface better supports comparison and action instead of asking users to decode the page structure.</p>
+      </article>
+      <article class="improvement-card">
+        <h3>More Confident Experience</h3>
+        <p>The overall flow feels more deliberate and supportive, which is especially important in a choice-heavy moment.</p>
+      </article>
     </div>
   </section>
   <footer>
