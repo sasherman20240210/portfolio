@@ -6,13 +6,23 @@
 <title>About Me</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --background: #ECDFD2;
+    --surface: #FFFFFF;
+    --text: #081849;
+    --muted: #5E5A63;
+    --accent: #5F3475;
+    --accent-soft: #213885;
+    --border: #ECDFD2;
+  }
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Gill Sans MT', 'Gill Sans', Calibri, 'Trebuchet MS', 'Helvetica Neue', sans-serif;
+    background: var(--background);
+    color: var(--text);
     min-height: 100vh;
   }
   nav {
-    background: #fff;
+    background: var(--surface);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 1rem 2rem;
     display: flex;
@@ -27,7 +37,7 @@
   nav .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2d3436;
+    color: var(--text);
     text-decoration: none;
   }
   nav .nav-links {
@@ -38,16 +48,19 @@
   }
   nav .nav-links a {
     text-decoration: none;
-    color: #2d3436;
+    color: var(--text);
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: all 0.2s ease;
   }
-  nav .nav-links a:hover,
+  nav .nav-links a:hover {
+    background: var(--accent-soft);
+    color: var(--surface);
+  }
   nav .nav-links a.active {
-    background: #0984e3;
-    color: #fff;
+    background: var(--accent);
+    color: var(--surface);
   }
   .about-hero {
     max-width: 1100px;
@@ -63,9 +76,9 @@
     display: block;
   }
   .card {
-    background: #fff;
+    background: var(--text);
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 16px 42px rgba(8,24,73,0.22);
     max-width: 800px;
     width: 100%;
     margin: 2rem auto;
@@ -74,32 +87,37 @@
   .info-section {
     padding: 2rem;
   }
-  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #2d3436; }
-  .subtitle { color: #636e72; margin-bottom: 1.5rem; font-size: 1.1rem; }
-  .bio { color: #2d3436; line-height: 1.6; margin-bottom: 1.5rem; }
-  h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: #2d3436; }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--surface); }
+  .subtitle { color: var(--border); margin-bottom: 1.5rem; font-size: 1.1rem; }
+  .bio { color: var(--surface); line-height: 1.6; margin-bottom: 1.5rem; }
+  h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--surface); }
   .services { list-style: none; margin-bottom: 1.5rem; }
   .services li {
     padding: 0.5rem 0;
-    color: #636e72;
-    border-bottom: 1px solid #dfe6e9;
+    color: var(--border);
+    border-bottom: 1px solid rgba(236,223,210,0.2);
   }
   .services li:last-child { border-bottom: none; }
   .socials { display: flex; gap: 1rem; flex-wrap: wrap; }
   .socials a {
+    background: var(--accent);
     text-decoration: none;
-    color: #0984e3;
+    color: var(--surface);
     font-weight: 600;
     padding: 0.5rem 1rem;
-    border: 2px solid #0984e3;
+    border: 2px solid var(--accent);
     border-radius: 8px;
     transition: all 0.2s ease;
   }
-  .socials a:hover { background: #0984e3; color: #fff; }
+  .socials a:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-soft);
+    color: var(--surface);
+  }
   footer {
     text-align: center;
     padding: 0 1rem 2rem;
-    color: #636e72;
+    color: var(--muted);
     font-size: 0.9rem;
   }
   @media (max-width: 900px) {
@@ -201,6 +219,6 @@
   </div>
   <footer>
     <p>&copy; 2026 Your Name. All rights reserved.</p>
-  </footer>
+</footer>
 </body>
 </html>
