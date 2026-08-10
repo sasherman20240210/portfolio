@@ -137,31 +137,6 @@
     line-height: 1.5;
     font-size: 0.95rem;
   }
-  .snapshot-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-  .snapshot-card {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    padding: 1.25rem;
-  }
-  .snapshot-card .label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #0984e3;
-    margin-bottom: 0.65rem;
-  }
-  .snapshot-card p {
-    color: #2d3436;
-    line-height: 1.5;
-  }
   .story-grid {
     max-width: 1100px;
     margin: 2rem auto;
@@ -178,7 +153,9 @@
   }
   .story-panel h2,
   .details-panel h2,
-  .differences-section h2 {
+  .improvements-section h2,
+  .research-section h2,
+  .research-story-card h2 {
     font-size: 1.35rem;
     color: #2d3436;
     margin-bottom: 1rem;
@@ -193,7 +170,7 @@
   }
   .story-block p,
   .details-list li,
-  .difference-card p {
+  .improvement-card p {
     color: #636e72;
     line-height: 1.6;
   }
@@ -221,26 +198,185 @@
     color: #2d3436;
     margin-bottom: 0.3rem;
   }
-  .differences-section {
+  .improvements-section {
     max-width: 1100px;
     margin: 2rem auto;
     padding: 0 2rem;
   }
-  .differences-grid {
+  .improvements-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
-  .difference-card {
+  .improvement-card {
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     padding: 1.4rem;
   }
-  .difference-card h3 {
+  .improvement-card h3 {
     font-size: 1rem;
     color: #2d3436;
     margin-bottom: 0.5rem;
+  }
+  .research-section {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  .research-intro {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 1rem;
+  }
+  .research-intro .eyebrow {
+    display: inline-block;
+    background: #0984e3;
+    color: #fff;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .research-intro p {
+    color: #636e72;
+    line-height: 1.6;
+    max-width: 780px;
+  }
+  .research-thread {
+    background: rgba(255,255,255,0.78);
+    border: 1px solid #dfe6ea;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .research-thread-track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    position: relative;
+  }
+  .research-thread-track::before {
+    content: "";
+    position: absolute;
+    top: 1.15rem;
+    left: calc(16.666% + 0.5rem);
+    right: calc(16.666% + 0.5rem);
+    height: 2px;
+    background: #d8e0e5;
+  }
+  .research-thread-step {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 0.45rem;
+    text-align: center;
+    color: #636e72;
+    line-height: 1.45;
+    font-size: 0.92rem;
+  }
+  .research-thread-step::before {
+    content: "";
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid #0984e3;
+    box-shadow: 0 0 0 6px #f5f7fa;
+    z-index: 1;
+  }
+  .research-thread-step strong {
+    color: #2d3436;
+    font-size: 0.95rem;
+  }
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .evidence-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .evidence-card .label {
+    display: block;
+    padding: 0.85rem 1rem 0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0984e3;
+  }
+  .research-image-frame {
+    height: 320px;
+    background: #f5f7fa;
+    padding: 1rem;
+  }
+  .research-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid #dfe6ea;
+    border-radius: 10px;
+  }
+  .evidence-card h3 {
+    font-size: 1rem;
+    color: #2d3436;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .evidence-card p {
+    color: #636e72;
+    line-height: 1.6;
+    padding: 0 1rem 1.2rem;
+  }
+  .research-story-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .research-story-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+  }
+  .research-story-card p,
+  .research-details-list li {
+    color: #636e72;
+    line-height: 1.6;
+  }
+  .research-story-card p + p {
+    margin-top: 1rem;
+  }
+  .research-details-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+  }
+  .research-details-list li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e9ec;
+  }
+  .research-details-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .research-details-list strong {
+    display: block;
+    color: #2d3436;
+    margin-bottom: 0.3rem;
   }
   footer {
     text-align: center;
@@ -260,14 +396,39 @@
     }
     .case-study,
     .story-grid,
-    .differences-section {
+    .improvements-section,
+    .research-section {
       padding: 0 1.5rem;
     }
     .case-study-hero,
     .story-grid,
-    .snapshot-grid,
-    .differences-grid {
+    .improvements-grid,
+    .evidence-grid,
+    .research-story-grid {
       grid-template-columns: 1fr;
+    }
+    .research-image-frame {
+      height: 420px;
+    }
+    .research-thread-track {
+      grid-template-columns: 1fr;
+    }
+    .research-thread-track::before {
+      top: 1.15rem;
+      bottom: 1.15rem;
+      left: 1.15rem;
+      right: auto;
+      width: 2px;
+      height: auto;
+    }
+    .research-thread-step {
+      grid-template-columns: 2.3rem 1fr;
+      justify-items: start;
+      text-align: left;
+      column-gap: 0.75rem;
+    }
+    .research-thread-step::before {
+      grid-row: 1 / span 2;
     }
   }
   @media (max-width: 640px) {
@@ -306,15 +467,22 @@
       aspect-ratio: 16 / 9;
     }
     .story-grid,
-    .differences-section {
+    .improvements-section,
+    .research-section {
       margin: 1.5rem auto;
       padding: 0 1rem;
       gap: 1.25rem;
     }
     .story-panel,
     .details-panel,
-    .difference-card {
+    .improvement-card,
+    .research-intro,
+    .research-story-card {
       padding: 1.5rem;
+    }
+    .research-image-frame {
+      height: 340px;
+      padding: 0.75rem;
     }
   }
 </style>
@@ -367,24 +535,6 @@
           </article>
         </div>
       </div>
-    </div>
-    <div class="snapshot-grid">
-      <article class="snapshot-card">
-        <span class="label">Problem</span>
-        <p>Related chat experiences can feel inconsistent when behavior and presentation diverge in small but visible ways.</p>
-      </article>
-      <article class="snapshot-card">
-        <span class="label">Focus</span>
-        <p>Compare interaction tone, response structure, and styling polish across two flows.</p>
-      </article>
-      <article class="snapshot-card">
-        <span class="label">Audience</span>
-        <p>Users looking for quick help or a guided next step inside a conversational support pattern.</p>
-      </article>
-      <article class="snapshot-card">
-        <span class="label">Outcome</span>
-        <p>Space reserved for task success, usage, satisfaction, or consistency metrics.</p>
-      </article>
     </div>
   </section>
   <section class="story-grid">
@@ -441,21 +591,96 @@
       </ul>
     </aside>
   </section>
-  <section class="differences-section">
-    <h2>Key Differences</h2>
-    <div class="differences-grid">
-      <article class="difference-card">
+  <section class="improvements-section">
+    <h2>What Improved</h2>
+    <div class="improvements-grid">
+      <article class="improvement-card">
         <h3>Response Rhythm</h3>
         <p>One flow can feel quicker or more direct, which changes the perceived efficiency of the conversation.</p>
       </article>
-      <article class="difference-card">
+      <article class="improvement-card">
         <h3>Visual Treatment</h3>
         <p>Minor styling shifts influence how polished, consistent, and trustworthy the interaction feels at a glance.</p>
       </article>
-      <article class="difference-card">
+      <article class="improvement-card">
         <h3>Guidance Quality</h3>
         <p>The way each flow frames the next step affects how supported the user feels while moving through the chat.</p>
       </article>
+    </div>
+  </section>
+  <section class="research-section">
+    <div class="research-intro">
+      <span class="eyebrow">Research Outcomes</span>
+      <h2>Chat Flow Evidence</h2>
+      <p>
+        This research effort examined how people move through GEICO support experiences when they need a clear path to help. The evidence compares two related moments so the page can surface where the chat pattern feels consistent, where it diverges, and what those differences mean for users.
+      </p>
+    </div>
+    <div class="research-thread" aria-label="Shared research method across GEICO chat flows">
+      <div class="research-thread-track">
+        <div class="research-thread-step">
+          <strong>Flow Review</strong>
+          Each chat path was reviewed from entry point through completion to identify moments of friction or clarity.
+        </div>
+        <div class="research-thread-step">
+          <strong>Pattern Comparison</strong>
+          The flows were compared side by side to evaluate pacing, message treatment, and next-step guidance.
+        </div>
+        <div class="research-thread-step">
+          <strong>Design Synthesis</strong>
+          Findings were grouped into themes that could guide stronger consistency across support interactions.
+        </div>
+      </div>
+    </div>
+    <div class="evidence-grid">
+      <article class="evidence-card">
+        <span class="label">Evidence 01</span>
+        <div class="research-image-frame">
+          <img src="assets/images/projects/geico/buttons cropped.png" alt="GEICO research image showing cropped button states">
+        </div>
+        <h3>Support Path Clarity</h3>
+        <p>
+          This card is reserved for the first research image. The supporting text frames how users understand the available support route, what the interface asks them to notice, and where the flow could reduce uncertainty.
+        </p>
+      </article>
+      <article class="evidence-card">
+        <span class="label">Evidence 02</span>
+        <div class="research-image-frame">
+          <img src="assets/images/projects/geico/tooltip cropped.png" alt="GEICO research image showing a cropped tooltip interaction">
+        </div>
+        <h3>Conversation Confidence</h3>
+        <p>
+          This card is reserved for the second research image. The paragraph space makes room to explain what changed in the interaction, how the chat communicates progress, and why the experience should feel more reliable.
+        </p>
+      </article>
+    </div>
+    <div class="research-story-grid">
+      <article class="research-story-card">
+        <h2>Narrative</h2>
+        <p>
+          The research focused on the parts of the chat experience that shape confidence before a user reaches a final answer. Entry cues, message rhythm, and the handoff between automated guidance and support options all affect whether the experience feels helpful or fragmented.
+        </p>
+        <p>
+          Looking at two flows together makes the differences easier to evaluate without turning either clip into an isolated example. The result is a clearer read on which interaction patterns should stay consistent across GEICO support moments.
+        </p>
+      </article>
+      <aside class="research-story-card">
+        <h2>Project Details</h2>
+        <ul class="research-details-list">
+          <li>
+            <strong>Research Lens</strong>
+            Chat clarity, response rhythm, support-path visibility, and confidence in next steps.
+          </li>
+          <li>
+            <strong>Evidence Set</strong>
+            Two equal-weight research cards prepared for the images and captions you will provide.
+          </li>
+          <li>
+            <strong>Outcome Focus</strong>
+            Identify patterns that could improve consistency, reduce uncertainty, and make support interactions easier to trust.
+          </li>
+        </ul>
+      </aside>
     </div>
   </section>
   <footer>
