@@ -98,13 +98,31 @@
     transform: translateY(-6px);
     box-shadow: 0 12px 36px rgba(0,0,0,0.18);
   }
-  .project-card img {
+  .project-card .image-frame {
     width: 100%;
-    height: 320px;
+    height: 340px;
+    background: #f1f4f8;
+    padding: 0.65rem;
+  }
+  .project-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 8px;
+  }
+  .project-card img.image-focal-top {
+    object-position: center top;
+  }
+  .project-card img.image-fit-contain {
+    object-fit: contain;
+  }
+  .project-card img.image-fill-card {
+    object-fit: cover;
+    object-position: center center;
   }
   .project-card .card-body {
-    padding: 1.25rem 1.5rem 1.4rem;
+    padding: 0.8rem 1.5rem 0.95rem;
   }
   .project-card h3 {
     font-size: 1.25rem;
@@ -141,8 +159,8 @@
     .project-card {
       flex-basis: 320px;
     }
-    .project-card img {
-      height: 280px;
+    .project-card .image-frame {
+      height: 300px;
     }
   }
   @media (max-width: 640px) {
@@ -184,11 +202,11 @@
       flex-basis: 100%;
       max-width: 420px;
     }
-    .project-card img {
-      height: 240px;
+    .project-card .image-frame {
+      height: 260px;
     }
     .project-card .card-body {
-      padding: 1rem 1.25rem 1.15rem;
+      padding: 0.75rem 1.25rem 0.9rem;
     }
   }
 </style>
@@ -214,25 +232,33 @@
   </section>
   <section class="projects-preview">
     <a class="project-card" href="caribou.html">
-      <img src="assets/images/projects/caribou/hero-placeholder.png" alt="Caribou">
+      <div class="image-frame">
+        <img class="image-fill-card" src="assets/images/projects/caribou/caribou mobile redesign.png" alt="Caribou">
+      </div>
       <div class="card-body">
         <h3>Caribou</h3>
       </div>
     </a>
     <a class="project-card" href="oportun.html">
-      <img src="assets/images/projects/oportun/Oportun cover image.png" alt="Oportun">
+      <div class="image-frame">
+        <img class="image-fit-contain" src="assets/images/projects/oportun/1000006218.png" alt="Oportun">
+      </div>
       <div class="card-body">
         <h3>Oportun</h3>
       </div>
     </a>
     <a class="project-card" href="geico.html">
-      <img src="assets/images/projects/geico/GEICO cover image.png" alt="GEICO">
+      <div class="image-frame">
+        <img src="assets/images/projects/geico/GEICO_homepage_crop.png" alt="GEICO">
+      </div>
       <div class="card-body">
         <h3>GEICO</h3>
       </div>
     </a>
     <a class="project-card" href="personal-projects.html">
-      <img src="assets/images/projects/personal-projects/hero-placeholder.png" alt="Personal Projects">
+      <div class="image-frame">
+        <img class="image-fit-contain" src="assets/images/projects/personal-projects/grocery list two active trips.png" alt="Personal Projects">
+      </div>
       <div class="card-body">
         <h3>Personal Projects</h3>
       </div>
