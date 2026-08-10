@@ -49,76 +49,138 @@
     background: #0984e3;
     color: #fff;
   }
-  .project-hero {
+  .projects-intro {
     max-width: 1100px;
-    margin: 2rem auto;
+    margin: 3rem auto 2rem;
     padding: 0 2rem;
   }
-  .project-hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  .projects-intro .eyebrow {
+    display: inline-block;
+    color: #0984e3;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.65rem;
+    text-transform: uppercase;
   }
-  .project-content {
+  .projects-intro h1 {
+    color: #2d3436;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+  .projects-intro p {
+    color: #636e72;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    max-width: 760px;
+  }
+  .project-showcase {
     max-width: 1100px;
     margin: 2rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
-  @media (max-width: 768px) {
-    .project-content { grid-template-columns: 1fr; }
-  }
-  .project-text {
+  .showcase-item {
+    align-items: center;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(360px, 560px) 1fr;
     padding: 2rem;
   }
-  .project-text h1 {
-    font-size: 2rem;
-    color: #2d3436;
-    margin-bottom: 0.5rem;
+  .showcase-item.reverse {
+    grid-template-columns: 1fr minmax(360px, 560px);
   }
-  .project-text .tag {
+  .showcase-item.compact {
+    grid-template-columns: minmax(260px, 380px) 1fr;
+  }
+  .showcase-item.compact.reverse {
+    grid-template-columns: 1fr minmax(260px, 380px);
+  }
+  .showcase-item.reverse .phone-shot {
+    order: 2;
+  }
+  .phone-shot {
+    background: #f5f7fa;
+    border: 1px solid rgba(45,52,54,0.08);
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 8px #fff, 0 10px 30px rgba(45,52,54,0.12);
+    margin: 0 auto;
+    max-width: 560px;
+    overflow: hidden;
+    padding: 12px;
+    width: 100%;
+  }
+  .phone-shot img {
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    max-height: 760px;
+    object-fit: contain;
+    object-position: top center;
+  }
+  .showcase-item.compact .phone-shot {
+    border-radius: 22px;
+    box-shadow: inset 0 0 0 10px #fff, 0 10px 30px rgba(45,52,54,0.12);
+    max-width: 360px;
+    padding: 14px;
+  }
+  .showcase-item.compact .phone-shot img {
+    border-radius: 12px;
+    max-height: 720px;
+  }
+  .showcase-copy {
+    max-width: 540px;
+  }
+  .showcase-copy .tag {
     display: inline-block;
     background: #0984e3;
     color: #fff;
-    padding: 0.25rem 0.75rem;
     border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+    padding: 0.25rem 0.7rem;
   }
-  .project-text p {
+  .showcase-copy h2 {
+    color: #2d3436;
+    font-size: 1.65rem;
+    margin-bottom: 0.75rem;
+  }
+  .showcase-copy p {
     color: #636e72;
-    line-height: 1.7;
-    margin-bottom: 1rem;
+    font-size: 1.02rem;
+    line-height: 1.75;
   }
-  .project-gallery {
+  .research-intro-card {
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-top: -1rem;
     padding: 2rem;
   }
-  .project-gallery h2 {
-    font-size: 1.25rem;
-    color: #2d3436;
+  .research-intro-card .eyebrow {
+    display: inline-block;
+    background: #0984e3;
+    color: #fff;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
     margin-bottom: 1rem;
   }
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
+  .research-intro-card h2 {
+    color: #2d3436;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
   }
-  .gallery-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
+  .research-intro-card p {
+    color: #636e72;
+    line-height: 1.6;
+    max-width: 780px;
   }
   footer {
     text-align: center;
@@ -136,9 +198,24 @@
       gap: 0.75rem;
       width: 100%;
     }
-    .project-hero,
-    .project-content {
+    .projects-intro,
+    .project-showcase {
       padding: 0 1.5rem;
+    }
+    .showcase-item,
+    .showcase-item.reverse,
+    .showcase-item.compact,
+    .showcase-item.compact.reverse {
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      max-width: 680px;
+    }
+    .showcase-item.reverse .phone-shot {
+      order: 0;
+    }
+    .research-intro-card {
+      margin: -0.75rem auto 0;
+      max-width: 680px;
     }
   }
   @media (max-width: 640px) {
@@ -157,30 +234,47 @@
       padding: 0.45rem 0.75rem;
       font-size: 0.95rem;
     }
-    .project-hero {
+    .projects-intro {
       margin: 1.5rem auto;
       padding: 0 1rem;
     }
-    .project-hero img {
-      max-height: 280px;
+    .projects-intro h1 {
+      font-size: 2rem;
     }
-    .project-content {
+    .projects-intro p {
+      font-size: 0.98rem;
+    }
+    .project-showcase {
       margin: 1.5rem auto;
       padding: 0 1rem;
       gap: 1.25rem;
     }
-    .project-text,
-    .project-gallery {
+    .showcase-item {
+      gap: 1.5rem;
+      padding: 1.25rem;
+    }
+    .phone-shot {
+      border-radius: 12px;
+      padding: 8px;
+    }
+    .phone-shot img {
+      max-height: 620px;
+    }
+    .showcase-item.compact .phone-shot {
+      border-radius: 18px;
+      padding: 10px;
+    }
+    .showcase-item.compact .phone-shot img {
+      max-height: 620px;
+    }
+    .showcase-copy h2 {
+      font-size: 1.35rem;
+    }
+    .showcase-copy p {
+      font-size: 0.98rem;
+    }
+    .research-intro-card {
       padding: 1.5rem;
-    }
-    .project-text h1 {
-      font-size: 1.75rem;
-    }
-    .gallery-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .gallery-grid img {
-      height: 120px;
     }
   }
 </style>
@@ -197,32 +291,75 @@
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
-  <section class="project-hero">
-    <img src="assets/images/projects/personal-projects/hero-placeholder.png" alt="Personal Projects Hero">
+  <section class="projects-intro">
+    <span class="eyebrow">Independent Work</span>
+    <h1>Personal Projects</h1>
+    <p>
+      A collection of self-directed product explorations focused on turning everyday workflows
+      into clearer, more useful digital tools.
+    </p>
   </section>
-  <section class="project-content">
-    <div class="project-text">
-      <h1>Personal Projects</h1>
-      <span class="tag">Design</span>
-      <p>
-        A detailed description of the fourth project. Explain the goals, challenges,
-        and outcomes. Describe the technologies and methodologies used throughout
-        the development process.
-      </p>
-      <p>
-        Highlight key achievements and results. Include metrics, user feedback,
-        or technical breakthroughs that made this project successful.
-      </p>
-    </div>
-    <div class="project-gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="assets/images/projects/personal-projects/gallery-placeholder.png" alt="Personal Projects Gallery 1">
-        <img src="assets/images/projects/personal-projects/gallery-placeholder.png" alt="Personal Projects Gallery 2">
-        <img src="assets/images/projects/personal-projects/gallery-placeholder.png" alt="Personal Projects Gallery 3">
-        <img src="assets/images/projects/personal-projects/gallery-placeholder.png" alt="Personal Projects Gallery 4">
+  <section class="project-showcase" aria-label="Personal project summaries">
+    <article class="showcase-item compact">
+      <div class="phone-shot">
+        <img src="assets/images/projects/personal-projects/grocery landing.png" alt="Grocery planning app landing view">
       </div>
-    </div>
+      <div class="showcase-copy">
+        <span class="tag">Planning Tool</span>
+        <h2>Grocery Planner</h2>
+        <p>
+          A household planning concept for organizing upcoming grocery trips, tracking active lists,
+          and making repeat shopping routines easier to manage.
+        </p>
+      </div>
+    </article>
+    <article class="research-intro-card">
+      <span class="eyebrow">Project Notes</span>
+      <h2>Grocery Planner Context</h2>
+      <p>
+        Space for a paragraph about the planning problem, the workflow this screen supports, and the product decisions behind the interface.
+      </p>
+    </article>
+    <article class="showcase-item compact reverse">
+      <div class="phone-shot">
+        <img src="assets/images/projects/personal-projects/tasks tab.png" alt="Task management app tasks tab">
+      </div>
+      <div class="showcase-copy">
+        <span class="tag">Productivity</span>
+        <h2>Task Tracker</h2>
+        <p>
+          A lightweight task dashboard designed to separate overdue, active, and upcoming work so
+          priorities stay visible without adding extra process.
+        </p>
+      </div>
+    </article>
+    <article class="research-intro-card">
+      <span class="eyebrow">Project Notes</span>
+      <h2>Task Tracker Context</h2>
+      <p>
+        Space for a paragraph about how the task view organizes attention, separates urgency from routine work, and keeps priorities easy to scan.
+      </p>
+    </article>
+    <article class="showcase-item">
+      <div class="phone-shot">
+        <img src="assets/images/projects/personal-projects/scheduled email.png" alt="Scheduled email mobile screen">
+      </div>
+      <div class="showcase-copy">
+        <span class="tag">Insights</span>
+        <h2>Spending Reports</h2>
+        <p>
+          A reporting view that explores how simple summaries and trends can help people understand
+          shopping patterns and make better recurring decisions.
+        </p>
+      </div>
+    </article>
+    <article class="research-intro-card">
+      <span class="eyebrow">Project Notes</span>
+      <h2>Scheduled Email Context</h2>
+      <p>
+        Space for a paragraph about the communication flow, what the scheduled email screen clarifies, and how the experience helps users act with confidence.
+      </p>
+    </article>
   </section>
   <footer>
     <p>&copy; 2026 Your Name. All rights reserved.</p>
