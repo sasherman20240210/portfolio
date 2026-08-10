@@ -65,7 +65,7 @@
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     padding: 2rem;
-    max-width: 640px;
+    width: 100%;
   }
   .hero-copy h1 {
     font-size: 2.4rem;
@@ -173,7 +173,9 @@
   }
   .story-panel h2,
   .details-panel h2,
-  .improvements-section h2 {
+  .improvements-section h2,
+  .research-section h2,
+  .research-story-card h2 {
     font-size: 1.35rem;
     color: #2d3436;
     margin-bottom: 1rem;
@@ -237,6 +239,160 @@
     color: #2d3436;
     margin-bottom: 0.5rem;
   }
+  .research-section {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  .research-intro {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 1rem;
+  }
+  .research-intro .eyebrow {
+    display: inline-block;
+    background: #0984e3;
+    color: #fff;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .research-intro p {
+    color: #636e72;
+    line-height: 1.6;
+    max-width: 780px;
+  }
+  .research-thread {
+    background: rgba(255,255,255,0.78);
+    border: 1px solid #dfe6ea;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .research-thread-track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    position: relative;
+  }
+  .research-thread-track::before {
+    content: "";
+    position: absolute;
+    top: 1.15rem;
+    left: calc(16.666% + 0.5rem);
+    right: calc(16.666% + 0.5rem);
+    height: 2px;
+    background: #d8e0e5;
+  }
+  .research-thread-step {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 0.45rem;
+    text-align: center;
+    color: #636e72;
+    line-height: 1.45;
+    font-size: 0.92rem;
+  }
+  .research-thread-step::before {
+    content: "";
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid #0984e3;
+    box-shadow: 0 0 0 6px #f5f7fa;
+    z-index: 1;
+  }
+  .research-thread-step strong {
+    color: #2d3436;
+    font-size: 0.95rem;
+  }
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .evidence-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .evidence-card .label {
+    display: block;
+    padding: 0.85rem 1rem 0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0984e3;
+  }
+  .map-frame {
+    height: 340px;
+    background: #f5f7fa;
+    padding: 1rem;
+  }
+  .map-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid #dfe6ea;
+    border-radius: 10px;
+  }
+  .evidence-card h3 {
+    font-size: 1rem;
+    color: #2d3436;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .research-story-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .research-story-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+  }
+  .research-story-card p,
+  .research-details-list li {
+    color: #636e72;
+    line-height: 1.6;
+  }
+  .research-story-card p + p {
+    margin-top: 1rem;
+  }
+  .research-details-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+  }
+  .research-details-list li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e9ec;
+  }
+  .research-details-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .research-details-list strong {
+    display: block;
+    color: #2d3436;
+    margin-bottom: 0.3rem;
+  }
   footer {
     text-align: center;
     padding: 2rem;
@@ -255,17 +411,43 @@
     }
     .case-study,
     .story-grid,
-    .improvements-section {
+    .improvements-section,
+    .research-section {
       padding: 0 1.5rem;
     }
     .case-study-hero,
     .story-grid,
     .snapshot-grid,
-    .improvements-grid {
+    .improvements-grid,
+    .evidence-grid,
+    .research-story-grid {
       grid-template-columns: 1fr;
     }
     .comparison-card img {
       height: 360px;
+    }
+    .map-frame {
+      height: 420px;
+    }
+    .research-thread-track {
+      grid-template-columns: 1fr;
+    }
+    .research-thread-track::before {
+      top: 1.15rem;
+      bottom: 1.15rem;
+      left: 1.15rem;
+      right: auto;
+      width: 2px;
+      height: auto;
+    }
+    .research-thread-step {
+      grid-template-columns: 2.3rem 1fr;
+      justify-items: start;
+      text-align: left;
+      column-gap: 0.75rem;
+    }
+    .research-thread-step::before {
+      grid-row: 1 / span 2;
     }
   }
   @media (max-width: 640px) {
@@ -304,15 +486,22 @@
       height: 300px;
     }
     .story-grid,
-    .improvements-section {
+    .improvements-section,
+    .research-section {
       margin: 1.5rem auto;
       padding: 0 1rem;
       gap: 1.25rem;
     }
     .story-panel,
     .details-panel,
-    .improvement-card {
+    .improvement-card,
+    .research-intro,
+    .research-story-card {
       padding: 1.5rem;
+    }
+    .map-frame {
+      height: 360px;
+      padding: 0.75rem;
     }
   }
 </style>
@@ -444,6 +633,82 @@
         <h3>More Confident Experience</h3>
         <p>The overall flow feels more deliberate and supportive, which is especially important in a choice-heavy moment.</p>
       </article>
+    </div>
+  </section>
+  <section class="research-section">
+    <div class="research-intro">
+      <span class="eyebrow">Research Outcomes</span>
+      <h2>Offer Selection Evidence</h2>
+      <p>
+        This research effort examined how users evaluate refinancing offers when multiple pieces of information compete for attention. Each view is treated as evidence from the same decision moment, helping frame patterns around clarity, confidence, and action.
+      </p>
+    </div>
+    <div class="research-thread" aria-label="Shared research method across the Caribou offer selection work">
+      <div class="research-thread-track">
+        <div class="research-thread-step">
+          <strong>Flow Review</strong>
+          The offer path was reviewed from entry through selection to identify where users needed stronger guidance.
+        </div>
+        <div class="research-thread-step">
+          <strong>Hierarchy Audit</strong>
+          Key content areas were compared for visual weight, scan order, and clarity around the primary action.
+        </div>
+        <div class="research-thread-step">
+          <strong>Design Synthesis</strong>
+          Findings were grouped into themes that informed a calmer, more directed offer selection experience.
+        </div>
+      </div>
+    </div>
+    <div class="evidence-grid">
+      <article class="evidence-card">
+        <span class="label">Evidence 01</span>
+        <div class="map-frame">
+          <img src="assets/images/projects/caribou/Offer selection page - Before.png" alt="Caribou offer selection page before redesign">
+        </div>
+        <h3>Baseline Experience</h3>
+      </article>
+      <article class="evidence-card">
+        <span class="label">Evidence 02</span>
+        <div class="map-frame">
+          <img src="assets/images/projects/caribou/Offer selection page - After.png" alt="Caribou offer selection page after redesign">
+        </div>
+        <h3>Redesigned Flow</h3>
+      </article>
+      <article class="evidence-card">
+        <span class="label">Evidence 03</span>
+        <div class="map-frame">
+          <img src="assets/images/projects/caribou/caribou mobile redesign.png" alt="Caribou mobile redesign screen">
+        </div>
+        <h3>Responsive Direction</h3>
+      </article>
+    </div>
+    <div class="research-story-grid">
+      <article class="research-story-card">
+        <h2>Narrative</h2>
+        <p>
+          The research focused on the point where users need to understand offer differences quickly enough to feel confident choosing a path forward. That moment depends on hierarchy, content grouping, and the way the interface separates primary action from supporting detail.
+        </p>
+        <p>
+          Looking at the before and after states together makes the design shift easier to evaluate without treating the visuals as isolated screens. The outcome is a clearer view of how reduced competition, stronger emphasis, and more deliberate spacing support decision-making.
+        </p>
+      </article>
+      <aside class="research-story-card">
+        <h2>Project Details</h2>
+        <ul class="research-details-list">
+          <li>
+            <strong>Research Lens</strong>
+            Offer comprehension, visual hierarchy, decision confidence, and clarity of next steps.
+          </li>
+          <li>
+            <strong>Evidence Set</strong>
+            Three equal-weight visuals reviewed as part of one offer selection improvement effort.
+          </li>
+          <li>
+            <strong>Outcome Focus</strong>
+            Identify patterns that could reduce uncertainty, support comparison, and make the primary action easier to trust.
+          </li>
+        </ul>
+      </aside>
     </div>
   </section>
   <footer>
