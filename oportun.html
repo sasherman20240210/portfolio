@@ -116,9 +116,10 @@
   }
   .comparison-card {
     background: var(--surface);
+    border: 1px solid rgba(8,24,73,0.12);
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 26px rgba(8,24,73,0.14);
   }
   .comparison-card .label {
     display: block;
@@ -133,7 +134,7 @@
     width: 100%;
     height: 460px;
     background: var(--background);
-    padding: 1rem;
+    padding: 0.85rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,10 +144,10 @@
     max-width: 100%;
     aspect-ratio: 9 / 16;
     background: var(--surface);
-    border: 1px solid var(--background);
-    border-radius: 18px;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-    padding: 0.55rem;
+    border: 2px solid rgba(8,24,73,0.28);
+    border-radius: 24px;
+    box-shadow: inset 0 0 0 8px var(--surface), 0 12px 28px rgba(8,24,73,0.2);
+    padding: 0.7rem;
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
@@ -161,20 +162,21 @@
   .phone-bar::before {
     content: "";
     width: 2.4rem;
-    height: 0.22rem;
+    height: 0.25rem;
     border-radius: 999px;
-    background: var(--background);
+    background: rgba(8,24,73,0.14);
   }
   .phone-frame img {
     width: 100%;
     min-height: 0;
     flex: 1 1 auto;
     object-fit: contain;
-    border: 1px solid var(--border);
-    border-radius: 10px;
+    object-position: top center;
+    border: 1px solid rgba(8,24,73,0.1);
+    border-radius: 14px;
   }
   .comparison-card p {
-    padding: 0 1rem 1rem;
+    padding: 1rem 1rem 1rem;
     color: var(--muted);
     line-height: 1.5;
     font-size: 0.95rem;
