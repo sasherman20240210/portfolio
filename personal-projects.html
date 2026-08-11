@@ -189,6 +189,27 @@
     font-size: 1.02rem;
     line-height: 1.75;
   }
+  .showcase-copy .copy-section {
+    border-top: 1px solid var(--border);
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+  .showcase-copy .copy-section h3 {
+    color: var(--text);
+    font-size: 1.15rem;
+    margin-bottom: 0.65rem;
+  }
+  .showcase-copy .copy-section h4 {
+    color: var(--text);
+    font-size: 0.98rem;
+    margin: 1.25rem 0 0.35rem;
+  }
+  .showcase-copy .copy-section h3 + h4 {
+    margin-top: 0;
+  }
+  .showcase-copy .copy-section p + p {
+    margin-top: 1rem;
+  }
   .research-intro-card {
     background: var(--text);
     border-radius: 16px;
@@ -354,14 +375,25 @@
           A household planning concept for organizing upcoming grocery trips, tracking active lists,
           and making repeat shopping routines easier to manage.
         </p>
+        <div class="copy-section">
+          <h3>Grocery Planner notes</h3>
+          <h4>What problem does it solve?</h4>
+          <p>
+            I like paper grocery lists. My household doesn't. We've tried note-taking apps and a shared MS CoPilot app for tracking. They're all terrible. I stand by my notes, but I tried my hand at building a custom mobile web tool because I'm magnanimous but very selfish. I wanted a personalized solution.
+          </p>
+          <h4>What does it do?</h4>
+          <p>
+            This tool is a lightweight mobile web app that I use while I shop. I can share it with my household to make a list ahead of time (or create as I go) and check items off when I find them. I can also add things ad hoc. I designed it mobile-first, so it's easy to tap and swipe.
+          </p>
+          <h4>How does it work?</h4>
+          <p>
+            I starting by loading up a list of the things we buy most often, and taking a guess at how often we buy them (something like, spinach every 7 days).
+          </p>
+          <p>
+            While I shop, I can check items off or put them back if I make a mistake. The app is tracking my purchase history and with enough data, it will make suggestions on when to buy something again (or suggest where my first guess could be better - maybe buy that spinach every 30 days because I'm only pretending to be healthy). The suggestions are basic by design, like 'buy now,' 'buy soon', or 'stocked.' With my 'tracked' items, I can just open the fridge and the pantry with my set list ready to go, instead of trying to remember what I might need.
+          </p>
+        </div>
       </div>
-    </article>
-    <article class="research-intro-card">
-      <span class="eyebrow">Project Notes</span>
-      <h2>Grocery Planner Context</h2>
-      <p>
-        Space for a paragraph about the planning problem, the workflow this screen supports, and the product decisions behind the interface.
-      </p>
     </article>
     <article class="showcase-item compact reverse">
       <div class="phone-shot">
@@ -374,34 +406,56 @@
           A lightweight task dashboard designed to separate overdue, active, and upcoming work so
           priorities stay visible without adding extra process.
         </p>
+        <div class="copy-section">
+          <h3>Task Tracker notes</h3>
+          <h4>What problem does it solve?</h4>
+          <p>
+            I'm the only user for this app. I clean my home with no frame of reference - when did I last dust that thing? Should I clean the washing machine? You're supposed to do that, right? I can never remember how long it's been, so I made a basic app with all the chores I do, so I can track them. I had to bid farewell to another paper list, but it was for the best.
+          </p>
+          <h4>What does it do?</h4>
+          <p>
+            I captured a list of chores in a basic web app. I mark when I've done something from the list, and the tool gives me an indicator of when it's due soon, overdue, or on track. I started with a baseline estimate of how often I should do that particular task to give me those notifications, which are color-coded.
+          </p>
+          <h4>How does it work?</h4>
+          <p>
+            It's plain HTML, CSS, and JavaScript, nothing fancy. The backend is powered by Firebase. Google sign-in handles access, and Firestore stores the shared household task list and completion history. It also keeps local browser storage as a fallback. I built this one after the grocery tracker, so I could reuse those patterns.
+          </p>
+          <p>
+            For this tool, the app code lives in a private GitHub repository, so changes can be saved, reviewed, versioned, and recovered over time instead of only existing on one local machine. I hadn't done that with the grocery tool, and I'm considering moving everything to GitHub. I'll have to do that carefully - lesson learned, new standard operating mode created.
+          </p>
+        </div>
       </div>
-    </article>
-    <article class="research-intro-card">
-      <span class="eyebrow">Project Notes</span>
-      <h2>Task Tracker Context</h2>
-      <p>
-        Space for a paragraph about how the task view organizes attention, separates urgency from routine work, and keeps priorities easy to scan.
-      </p>
     </article>
     <article class="showcase-item">
       <div class="phone-shot">
         <img src="assets/images/projects/personal-projects/scheduled email.png" alt="Scheduled email mobile screen">
       </div>
       <div class="showcase-copy">
-        <span class="tag">Insights</span>
-        <h2>Spending Reports</h2>
+        <span class="tag">Automation</span>
+        <h2>Showtime Notifications</h2>
         <p>
-          A reporting view that explores how simple summaries and trends can help people understand
-          shopping patterns and make better recurring decisions.
+          A scheduled email workflow that checks Smithsonian IMAX showtimes and reports when new
+          tickets are available, nothing changed, or the page could not be read.
         </p>
+        <div class="copy-section">
+          <h3>Showtime Notifications notes</h3>
+          <h4>What problem does it solve?</h4>
+          <p>
+            The Smithsonian's Air and Space Museum has an amazing IMAX Theater, which is finally open again after years of renovations. What the Smithsonian does not have is an amazing website for booking tickets for said theater, or any notifications (that I could find) for new showtimes. So, I built my own notifications to get tickets for The Odyssey.
+          </p>
+          <h4>What does it do?</h4>
+          <p>
+            I get brief email updates three times a day. The tool pulls listed showtimes and compares them with a saved snapshot from the last successful check. The Smithsonian only has about 7 days worth of showtimes posted, so I have no idea when to check back for new dates and times. This system solves the problem.
+          </p>
+          <h4>How does it work?</h4>
+          <p>
+            I used a no-code approach with ChatGPT. I created requirements and a build plan, and set up both in markdown files. I iterated through the build plan, checking progress and testing all the way through.
+          </p>
+          <p>
+            The result was a small Python tool that looks at the Smithsonian's movie page for The Odyssey, specifically. Everything's built locally, then committed and pushed to my GitHub repo. The repo has a workflow set up to run a GitHub Action three times a day, sending Gmail notifications that report whether new showtimes were found, nothing changed, or the page could not be read. It's also set up to handle errors, like the Smithsonian site showing a verification page.
+          </p>
+        </div>
       </div>
-    </article>
-    <article class="research-intro-card">
-      <span class="eyebrow">Project Notes</span>
-      <h2>Scheduled Email Context</h2>
-      <p>
-        Space for a paragraph about the communication flow, what the scheduled email screen clarifies, and how the experience helps users act with confidence.
-      </p>
     </article>
   </section>
   <footer>
