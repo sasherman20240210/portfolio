@@ -181,6 +181,73 @@
     line-height: 1.5;
     font-size: 0.95rem;
   }
+  .case-index {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .case-link-card {
+    background: var(--surface);
+    border: 1px solid rgba(8,24,73,0.12);
+    border-radius: 14px;
+    box-shadow: 0 8px 26px rgba(8,24,73,0.14);
+    color: var(--text);
+    display: grid;
+    gap: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .case-link-card:hover {
+    box-shadow: 0 12px 32px rgba(8,24,73,0.18);
+    transform: translateY(-2px);
+  }
+  .case-link-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: rgba(8,24,73,0.05);
+    padding: 1rem;
+  }
+  .case-link-content {
+    padding: 0 1.25rem 1.25rem;
+  }
+  .case-link-card .label,
+  .section-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.65rem;
+  }
+  .case-link-card h2 {
+    color: var(--text);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+  .case-link-card p {
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .case-band {
+    border-top: 1px solid rgba(8,24,73,0.12);
+    margin-top: 2.5rem;
+    padding-top: 0.5rem;
+  }
+  .case-band.alt {
+    background: rgba(255,255,255,0.32);
+    border-bottom: 1px solid rgba(8,24,73,0.12);
+    margin-top: 2.5rem;
+    padding: 0.5rem 0 2rem;
+  }
+  .case-band .story-grid,
+  .case-band .improvements-section,
+  .case-band .research-section {
+    margin-top: 1.5rem;
+  }
   .story-grid {
     max-width: 1100px;
     margin: 2rem auto;
@@ -444,10 +511,14 @@
     }
     .case-study-hero,
     .story-grid,
+    .case-index,
     .improvements-grid,
     .evidence-grid,
     .research-story-grid {
       grid-template-columns: 1fr;
+    }
+    .case-link-card img {
+      height: 320px;
     }
     .device-frame {
       height: 360px;
@@ -511,6 +582,9 @@
     .device-frame {
       height: 300px;
     }
+    .case-link-card img {
+      height: 260px;
+    }
     .story-grid,
     .improvements-section,
     .research-section {
@@ -547,188 +621,219 @@
   <section class="case-study">
     <div class="case-study-hero">
       <div class="hero-copy">
-        <span class="eyebrow">Experience Redesign</span>
+        <span class="eyebrow">Two Product Case Studies</span>
         <h1>Oportun</h1>
         <p class="summary">
-          Reframing a customer experience so important decisions, location context, and next steps are easier to understand at a glance.
+          Two Oportun case studies focused on clearer financial-service experiences, from mobile product flow to real-world location discovery.
         </p>
         <p class="focus">
-          This page now follows the same comparison-led case-study format as Caribou, with two visual slots ready for the images you will provide next.
+          Start with the study that matches the story you want to evaluate, then scan each section for challenge, approach, evidence, and outcome.
         </p>
       </div>
-      <div class="comparison-panel">
-        <div class="comparison-grid">
-          <article class="comparison-card">
-            <span class="label">Image 1</span>
-            <div class="device-frame">
-              <div class="phone-frame">
-                <div class="phone-bar" aria-hidden="true"></div>
-                <img src="assets/images/projects/oportun/nma 1.png" alt="Oportun experience screen showing the first NMA view">
+    </div>
+    <div class="case-index" aria-label="Oportun case studies">
+      <a class="case-link-card" href="#experience-redesign">
+        <img src="assets/images/projects/oportun/nma 1.png" alt="Oportun mobile experience screen">
+        <div class="case-link-content">
+          <span class="label">Case Study 01</span>
+          <h2>Native Mobile App Experience</h2>
+          <p>Improving the mobile app experience so customers could understand their options, move through key tasks, and make financial decisions with more confidence.</p>
+        </div>
+      </a>
+      <a class="case-link-card" href="#location-research">
+        <img src="assets/images/projects/oportun/oportun_fruitvaleave_viagooglemaps.PNG" alt="Google Maps view of an Oportun location">
+        <div class="case-link-content">
+          <span class="label">Case Study 02</span>
+          <h2>Location Research Evidence</h2>
+          <p>Studying real-world branch visibility, map context, and customer discovery patterns.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+  <main>
+    <div class="case-band" id="experience-redesign">
+      <section class="research-section">
+        <div class="research-intro">
+          <span class="eyebrow">Case Study 01</span>
+          <h2>Native Mobile App Experience</h2>
+          <p>
+            This case study focuses on the Oportun Native Mobile App, where customers needed a clearer way to understand their financial options, review important details, and take the next step from a small-screen experience.
+          </p>
+        </div>
+        <div class="comparison-panel">
+          <div class="comparison-grid">
+            <article class="comparison-card">
+              <span class="label">Image 1</span>
+              <div class="device-frame">
+                <div class="phone-frame">
+                  <div class="phone-bar" aria-hidden="true"></div>
+                  <img src="assets/images/projects/oportun/nma 1.png" alt="Oportun experience screen showing the first NMA view">
+                </div>
               </div>
-            </div>
-            <p>The first Oportun visual in the comparison set, highlighting the initial experience state and the details users need to understand first.</p>
-          </article>
-          <article class="comparison-card">
-            <span class="label">Image 2</span>
-            <div class="device-frame">
-              <div class="phone-frame">
-                <div class="phone-bar" aria-hidden="true"></div>
-                <img src="assets/images/projects/oportun/nma 2.png" alt="Oportun experience screen showing the second NMA view">
+              <p>The first Oportun visual in the comparison set, highlighting the initial experience state and the details users need to understand first.</p>
+            </article>
+            <article class="comparison-card">
+              <span class="label">Image 2</span>
+              <div class="device-frame">
+                <div class="phone-frame">
+                  <div class="phone-bar" aria-hidden="true"></div>
+                  <img src="assets/images/projects/oportun/nma 2.png" alt="Oportun experience screen showing the second NMA view">
+                </div>
               </div>
-            </div>
-            <p>The second Oportun visual in the comparison set, showing how the experience continues and how the information hierarchy evolves.</p>
+              <p>The second Oportun visual in the comparison set, showing how the experience continues and how the information hierarchy evolves.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="story-grid">
+        <div class="story-panel">
+          <span class="section-label">Experience Redesign</span>
+          <h2>Narrative</h2>
+          <div class="story-block">
+            <h3>Context</h3>
+            <p>
+              Oportun customers use the Native Mobile App to manage important financial tasks in moments that often require speed, clarity, and trust. The experience needed to make key information easier to find without overwhelming users.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>Challenge</h3>
+            <p>
+              Mobile financial-service experiences have to balance simplicity with responsibility. Customers need plain-language guidance, visible next steps, and enough context to feel confident before taking action.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>Design Approach</h3>
+            <p>
+              The app experience was evaluated through the lens of information hierarchy, task flow, and decision support. The goal was to surface what mattered most, reduce unnecessary friction, and make each screen feel easier to scan and act on.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>What Changed</h3>
+            <p>
+              The updated flow puts customer needs at the center: clearer screen structure, more direct guidance, and stronger visual prioritization of key actions and supporting information.
+            </p>
+          </div>
+        </div>
+        <aside class="details-panel">
+          <h2>Project Details</h2>
+          <ul class="details-list">
+            <li>
+              <strong>Primary Goal</strong>
+              Improve clarity and confidence in the Oportun Native Mobile App experience.
+            </li>
+            <li>
+              <strong>Design Lens</strong>
+              Mobile task flow, information hierarchy, customer comprehension, and trust.
+            </li>
+            <li>
+              <strong>Evidence Slot</strong>
+              Ready for usability insights, task-completion findings, comprehension metrics, or product-performance data.
+            </li>
+            <li>
+              <strong>Key Constraint</strong>
+              Make complex financial information feel approachable without oversimplifying important decisions.
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section class="improvements-section">
+        <h2>What Improved</h2>
+        <div class="improvements-grid">
+          <article class="improvement-card">
+            <h3>Clearer Mobile Flow</h3>
+            <p>The experience better organizes key information so customers can understand where they are, what matters, and what to do next.</p>
+          </article>
+          <article class="improvement-card">
+            <h3>Stronger Decision Support</h3>
+            <p>Important details and actions are framed in a way that helps users move forward with more confidence.</p>
+          </article>
+          <article class="improvement-card">
+            <h3>Better Small-Screen Hierarchy</h3>
+            <p>The app screens prioritize the most useful content first, reducing friction in moments where clarity matters most.</p>
           </article>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
-  <section class="story-grid">
-    <div class="story-panel">
-      <h2>Narrative</h2>
-      <div class="story-block">
-        <h3>Context</h3>
-        <p>
-          This case study centers on an Oportun experience where users need to quickly understand what is available, what matters, and what action to take next.
-        </p>
-      </div>
-      <div class="story-block">
-        <h3>Challenge</h3>
-        <p>
-          Financial-services interactions carry extra trust and clarity requirements. If the page asks users to work too hard to interpret information, the experience can feel heavier than it needs to.
-        </p>
-      </div>
-      <div class="story-block">
-        <h3>Design Approach</h3>
-        <p>
-          The redesigned case-study structure leads with visual comparison, then uses short narrative sections to explain the customer need, product intent, and design choices behind the work.
-        </p>
-      </div>
-      <div class="story-block">
-        <h3>What Changed</h3>
-        <p>
-          Instead of a generic hero and gallery, the page now frames the work around a focused pair of visuals, a clear project snapshot, and supporting details that can be updated as final assets and metrics are added.
-        </p>
-      </div>
-    </div>
-    <aside class="details-panel">
-      <h2>Project Details</h2>
-      <ul class="details-list">
-        <li>
-          <strong>Primary Goal</strong>
-          Make the Oportun experience easier to evaluate quickly and confidently.
-        </li>
-        <li>
-          <strong>Design Lens</strong>
-          Reduce cognitive load while preserving the information customers need.
-        </li>
-        <li>
-          <strong>Evidence Slot</strong>
-          Ready for conversion, comprehension, task completion, or research findings.
-        </li>
-        <li>
-          <strong>Key Constraint</strong>
-          Balance approachable presentation with the seriousness of financial decision-making.
-        </li>
-        <li>
-          <strong>Team Notes</strong>
-          Useful place for timeline, collaborators, tools, ownership, or launch notes.
-        </li>
-      </ul>
-    </aside>
-  </section>
-  <section class="improvements-section">
-    <h2>What Improved</h2>
-    <div class="improvements-grid">
-      <article class="improvement-card">
-        <h3>Stronger Framing</h3>
-        <p>The page now explains the project through a direct comparison instead of a broad gallery.</p>
-      </article>
-      <article class="improvement-card">
-        <h3>Clearer Story</h3>
-        <p>Context, challenge, approach, and change are separated into sections that are easier to scan.</p>
-      </article>
-      <article class="improvement-card">
-        <h3>Ready for Final Assets</h3>
-        <p>The two main visual cards are prepared for the images and captions that will complete the case study.</p>
-      </article>
-    </div>
-  </section>
-  <section class="research-section">
-    <div class="research-intro">
-      <span class="eyebrow">Research Outcomes</span>
-      <h2>Location Research Evidence</h2>
-      <p>
-        This research effort examined how Oportun locations appeared in real-world map contexts. Each view is treated as equal evidence from the same study, helping frame patterns around visibility, surrounding context, and customer discovery.
-      </p>
-    </div>
-    <div class="research-thread" aria-label="Shared research method across all three locations">
-      <div class="research-thread-track">
-        <div class="research-thread-step">
-          <strong>In-Person Visits</strong>
-          The research team visited each location to observe the setting and surrounding context firsthand.
+
+    <div class="case-band alt" id="location-research">
+      <section class="research-section">
+        <div class="research-intro">
+          <span class="eyebrow">Case Study 02</span>
+          <h2>Location Research Evidence</h2>
+          <p>
+            This research effort examined how Oportun locations appeared in real-world map contexts. Each view is treated as equal evidence from the same study, helping frame patterns around visibility, surrounding context, and customer discovery.
+          </p>
         </div>
-        <div class="research-thread-step">
-          <strong>Employee & Customer Interviews</strong>
-          Each visit included conversations with employees and customers to understand practical needs and local context.
+        <div class="research-thread" aria-label="Shared research method across all three locations">
+          <div class="research-thread-track">
+            <div class="research-thread-step">
+              <strong>In-Person Visits</strong>
+              The research team visited each location to observe the setting and surrounding context firsthand.
+            </div>
+            <div class="research-thread-step">
+              <strong>Employee & Customer Interviews</strong>
+              Each visit included conversations with employees and customers to understand practical needs and local context.
+            </div>
+            <div class="research-thread-step">
+              <strong>Virtual Follow-Ups</strong>
+              Follow-up interviews helped validate what the team heard on site and clarify patterns across locations.
+            </div>
+          </div>
         </div>
-        <div class="research-thread-step">
-          <strong>Virtual Follow-Ups</strong>
-          Follow-up interviews helped validate what the team heard on site and clarify patterns across locations.
+        <div class="evidence-grid">
+          <article class="evidence-card">
+            <span class="label">Evidence 01</span>
+            <div class="map-frame">
+              <img src="assets/images/projects/oportun/oportun_foodsco_macarthuroakland.PNG" alt="Google Maps view of an Oportun location near FoodMaxx and MacArthur in Oakland">
+            </div>
+            <h3>FoodMaxx / MacArthur</h3>
+          </article>
+          <article class="evidence-card">
+            <span class="label">Evidence 02</span>
+            <div class="map-frame">
+              <img src="assets/images/projects/oportun/oportun_fruitvaleave_viagooglemaps.PNG" alt="Google Maps view of an Oportun location on Fruitvale Avenue">
+            </div>
+            <h3>Fruitvale Avenue</h3>
+          </article>
+          <article class="evidence-card">
+            <span class="label">Evidence 03</span>
+            <div class="map-frame">
+              <img src="assets/images/projects/oportun/oportun_standalone_viagooglemaps.PNG" alt="Google Maps view of a standalone Oportun location">
+            </div>
+            <h3>Standalone Location</h3>
+          </article>
         </div>
-      </div>
+        <div class="research-story-grid">
+          <article class="research-story-card">
+            <h2>Narrative</h2>
+            <p>
+              The research focused on how Oportun locations show up in everyday search and map contexts, where customers may be evaluating convenience, proximity, and credibility before deciding whether to visit.
+            </p>
+            <p>
+              Looking across three location examples made it easier to compare environmental cues without treating any single branch as the main story. The outcome is a clearer picture of how visibility, surrounding businesses, and map presentation can shape customer expectations.
+            </p>
+          </article>
+          <aside class="research-story-card">
+            <h2>Project Details</h2>
+            <ul class="research-details-list">
+              <li>
+                <strong>Research Lens</strong>
+                Location visibility, surrounding context, map presentation, and customer wayfinding.
+              </li>
+              <li>
+                <strong>Evidence Set</strong>
+                Three equal-weight Google Maps examples reviewed as part of one research effort.
+              </li>
+              <li>
+                <strong>Outcome Focus</strong>
+                Identify patterns that could inform branch discovery, local search presentation, and customer decision support.
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
     </div>
-    <div class="evidence-grid">
-      <article class="evidence-card">
-        <span class="label">Evidence 01</span>
-        <div class="map-frame">
-          <img src="assets/images/projects/oportun/oportun_foodsco_macarthuroakland.PNG" alt="Google Maps view of an Oportun location near FoodMaxx and MacArthur in Oakland">
-        </div>
-        <h3>FoodMaxx / MacArthur</h3>
-      </article>
-      <article class="evidence-card">
-        <span class="label">Evidence 02</span>
-        <div class="map-frame">
-          <img src="assets/images/projects/oportun/oportun_fruitvaleave_viagooglemaps.PNG" alt="Google Maps view of an Oportun location on Fruitvale Avenue">
-        </div>
-        <h3>Fruitvale Avenue</h3>
-      </article>
-      <article class="evidence-card">
-        <span class="label">Evidence 03</span>
-        <div class="map-frame">
-          <img src="assets/images/projects/oportun/oportun_standalone_viagooglemaps.PNG" alt="Google Maps view of a standalone Oportun location">
-        </div>
-        <h3>Standalone Location</h3>
-      </article>
-    </div>
-    <div class="research-story-grid">
-      <article class="research-story-card">
-        <h2>Narrative</h2>
-        <p>
-          The research focused on how Oportun locations show up in everyday search and map contexts, where customers may be evaluating convenience, proximity, and credibility before deciding whether to visit.
-        </p>
-        <p>
-          Looking across three location examples made it easier to compare environmental cues without treating any single branch as the main story. The outcome is a clearer picture of how visibility, surrounding businesses, and map presentation can shape customer expectations.
-        </p>
-      </article>
-      <aside class="research-story-card">
-        <h2>Project Details</h2>
-        <ul class="research-details-list">
-          <li>
-            <strong>Research Lens</strong>
-            Location visibility, surrounding context, map presentation, and customer wayfinding.
-          </li>
-          <li>
-            <strong>Evidence Set</strong>
-            Three equal-weight Google Maps examples reviewed as part of one research effort.
-          </li>
-          <li>
-            <strong>Outcome Focus</strong>
-            Identify patterns that could inform branch discovery, local search presentation, and customer decision support.
-          </li>
-        </ul>
-      </aside>
-    </div>
-  </section>
+  </main>
   <footer>
     <p>&copy; 2026 Your Name. All rights reserved.</p>
 </footer>
