@@ -143,20 +143,40 @@
     line-height: 1.5;
     font-size: 0.95rem;
   }
-  .snapshot-grid {
+  .case-index {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 1.5rem;
   }
-  .snapshot-card {
+  .case-link-card {
     background: var(--surface);
     border: 1px solid rgba(8,24,73,0.12);
     border-radius: 14px;
     box-shadow: 0 8px 26px rgba(8,24,73,0.14);
-    padding: 1.25rem;
+    color: var(--text);
+    display: grid;
+    gap: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .snapshot-card .label {
+  .case-link-card:hover {
+    box-shadow: 0 12px 32px rgba(8,24,73,0.18);
+    transform: translateY(-2px);
+  }
+  .case-link-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: rgba(8,24,73,0.05);
+    padding: 1rem;
+  }
+  .case-link-content {
+    padding: 0 1.25rem 1.25rem;
+  }
+  .case-link-card .label,
+  .section-label {
     display: block;
     font-size: 0.8rem;
     font-weight: 700;
@@ -165,9 +185,62 @@
     color: var(--accent);
     margin-bottom: 0.65rem;
   }
-  .snapshot-card p {
+  .case-link-card h2 {
     color: var(--text);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+  .case-link-card p {
+    color: var(--muted);
     line-height: 1.5;
+  }
+  .case-band {
+    border-top: 1px solid rgba(8,24,73,0.12);
+    margin-top: 2.5rem;
+    padding-top: 0.5rem;
+  }
+  .case-band.alt {
+    background: rgba(255,255,255,0.32);
+    border-bottom: 1px solid rgba(8,24,73,0.12);
+    margin-top: 2.5rem;
+    padding: 0.5rem 0 2rem;
+  }
+  .case-band .story-grid,
+  .case-band .improvements-section,
+  .case-band .research-section {
+    margin-top: 1.5rem;
+  }
+  .feature-panel {
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(8,24,73,0.12);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(8,24,73,0.12);
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .feature-image {
+    width: 100%;
+    height: 520px;
+    object-fit: contain;
+    background: rgba(8,24,73,0.05);
+    border: 1px solid rgba(8,24,73,0.12);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .supporting-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .supporting-image-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: var(--surface);
+    border: 1px solid rgba(8,24,73,0.12);
+    border-radius: 12px;
+    padding: 1rem;
   }
   .story-grid {
     max-width: 1100px;
@@ -437,11 +510,19 @@
     }
     .case-study-hero,
     .story-grid,
-    .snapshot-grid,
+    .case-index,
     .improvements-grid,
     .evidence-grid,
-    .research-story-grid {
+    .research-story-grid,
+    .supporting-image-grid {
       grid-template-columns: 1fr;
+    }
+    .feature-image {
+      height: 440px;
+    }
+    .case-link-card img,
+    .supporting-image-grid img {
+      height: 320px;
     }
     .comparison-card img {
       height: 360px;
@@ -505,6 +586,14 @@
     .comparison-card img {
       height: 300px;
     }
+    .case-link-card img,
+    .supporting-image-grid img {
+      height: 260px;
+    }
+    .feature-image {
+      height: 360px;
+      padding: 0.75rem;
+    }
     .story-grid,
     .improvements-section,
     .research-section {
@@ -541,196 +630,239 @@
   <section class="case-study">
     <div class="case-study-hero">
       <div class="hero-copy">
-        <span class="eyebrow">Offer Selection Redesign</span>
+        <span class="eyebrow">Two Product Case Studies</span>
         <h1>Caribou</h1>
         <p class="summary">
-          Reframing the offer selection experience to make the next step feel clearer, more actionable, and easier to trust.
+          Two Caribou case studies focused on making refinancing decisions clearer across mobile offer selection, responsive design, and the broader digital experience.
         </p>
         <p class="focus">
-          This page is structured as a comparison-led case study so the visual change is immediate, while the narrative and supporting data stay easy to scan below.
+          Start with the study that matches the story you want to evaluate, then scan each section for challenge, approach, evidence, and outcome.
         </p>
       </div>
-      <div class="comparison-panel">
-        <div class="comparison-grid">
-          <article class="comparison-card">
-            <span class="label">Before</span>
-            <img src="assets/images/projects/caribou/Offer selection page - Before.png" alt="Caribou offer selection page before redesign">
-            <p>An earlier version of the offer selection experience with heavier visual competition and a less guided decision path.</p>
+    </div>
+    <div class="case-index" aria-label="Caribou case studies">
+      <a class="case-link-card" href="#offer-selection">
+        <img src="assets/images/projects/caribou/Offer selection page - After.png" alt="Caribou offer selection redesign screen">
+        <div class="case-link-content">
+          <span class="label">Case Study 01</span>
+          <h2>Mobile Offer Selection Redesign</h2>
+          <p>Clarifying hierarchy, comparison, and next-step confidence in a choice-heavy mobile refinancing moment.</p>
+        </div>
+      </a>
+      <a class="case-link-card" href="#mobile-experience">
+        <img src="assets/images/projects/caribou/caribou mobile redesign.png" alt="Caribou mobile redesign screen">
+        <div class="case-link-content">
+          <span class="label">Case Study 02</span>
+          <h2>Mobile Experience Direction</h2>
+          <p>Extending the product story into a responsive experience that feels lighter, more focused, and easier to scan.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+  <main>
+    <div class="case-band" id="offer-selection">
+      <section class="research-section">
+        <div class="research-intro">
+          <span class="eyebrow">Case Study 01</span>
+          <h2>Mobile Offer Selection Redesign</h2>
+          <p>
+            Redesigning Caribou's mobile offer-selection experience so customers could compare refinance options more confidently and understand the path from offer review to lender submission.
+          </p>
+        </div>
+        <div class="comparison-panel">
+          <div class="comparison-grid">
+            <article class="comparison-card">
+              <span class="label">Before</span>
+              <img src="assets/images/projects/caribou/Offer selection page - Before.png" alt="Caribou offer selection page before redesign">
+              <p>The earlier offer-selection screen created more visual competition around a high-stakes decision. Customers had to work harder to compare terms, understand the recommended path, and identify what to do next.</p>
+            </article>
+            <article class="comparison-card">
+              <span class="label">After</span>
+              <img src="assets/images/projects/caribou/Offer selection page - After.png" alt="Caribou offer selection page after redesign">
+              <p>The redesigned mobile screen gives the offer decision clearer structure, stronger hierarchy, and a more focused next step, helping customers evaluate refinance options with less friction.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="story-grid">
+        <div class="story-panel">
+          <span class="section-label">Mobile Offer Selection</span>
+          <h2>Narrative</h2>
+          <div class="story-block">
+            <h3>Context</h3>
+            <p>
+              This case study focuses on the moment after customers are shown refinance offers. At this point, they need to compare loan terms, understand tradeoffs, and decide whether to continue toward lender review.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>Challenge</h3>
+            <p>
+              Offer selection is a dense decision point: APR, payment, term length, savings, lender context, and next-step language all compete for attention. On mobile, that complexity is even harder to manage because the screen has less room for comparison and reassurance.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>Design Approach</h3>
+            <p>
+              The redesign clarified the information hierarchy around the selected offer, reduced visual noise, and made the primary action easier to identify. Supporting details were organized so customers could scan the offer first, then dig into terms and context as needed.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>What Changed</h3>
+            <p>
+              The after state turns the page from a crowded comparison moment into a more guided decision flow. The selected offer, key terms, and continuation path are easier to read, while secondary information feels less distracting.
+            </p>
+          </div>
+        </div>
+        <aside class="details-panel">
+          <h2>Project Details</h2>
+          <ul class="details-list">
+            <li>
+              <strong>Primary Goal</strong>
+              Help customers compare refinance offers and continue with confidence.
+            </li>
+            <li>
+              <strong>Product Moment</strong>
+              Mobile offer selection after customers are shown refinance terms.
+            </li>
+            <li>
+              <strong>Design Lens</strong>
+              Offer hierarchy, comparison clarity, scan order, financial confidence, and next-step comprehension.
+            </li>
+            <li>
+              <strong>Funnel Context</strong>
+              Offer selection connects customers shown refinance offers to applications sent to lenders for review.
+            </li>
+            <li>
+              <strong>Evidence to Add</strong>
+              Use completion, offer-selection, lender-submission, or drop-off data if available.
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section class="improvements-section">
+        <h2>What Improved</h2>
+        <div class="improvements-grid">
+          <article class="improvement-card">
+            <h3>Clearer Offer Hierarchy</h3>
+            <p>The redesigned screen makes the selected offer and key loan terms easier to understand at a glance.</p>
           </article>
-          <article class="comparison-card">
-            <span class="label">After</span>
-            <img src="assets/images/projects/caribou/Offer selection page - After.png" alt="Caribou offer selection page after redesign">
-            <p>A more focused flow with stronger hierarchy, clearer emphasis, and a calmer experience around offer choice.</p>
+          <article class="improvement-card">
+            <h3>Lower Decision Friction</h3>
+            <p>Reducing competing visual elements helps customers compare options without feeling overloaded.</p>
+          </article>
+          <article class="improvement-card">
+            <h3>Stronger Next-Step Confidence</h3>
+            <p>The primary action and supporting context work together so continuing feels more intentional and less ambiguous.</p>
           </article>
         </div>
-      </div>
+      </section>
     </div>
-    <div class="snapshot-grid">
-      <article class="snapshot-card">
-        <span class="label">Problem</span>
-        <p>Offer selection needed stronger clarity and a more confident path forward.</p>
-      </article>
-      <article class="snapshot-card">
-        <span class="label">Focus</span>
-        <p>Improve hierarchy, decision support, and visual emphasis around primary actions.</p>
-      </article>
-      <article class="snapshot-card">
-        <span class="label">Audience</span>
-        <p>Members comparing options and deciding what step to take next.</p>
-      </article>
-      <article class="snapshot-card">
-        <span class="label">Outcome</span>
-        <p>Space reserved for live metrics, qualitative feedback, or adoption lift.</p>
-      </article>
-    </div>
-  </section>
-  <section class="story-grid">
-    <div class="story-panel">
-      <h2>Narrative</h2>
-      <div class="story-block">
-        <h3>Context</h3>
-        <p>
-          This redesign centers on the moment a user has to evaluate and choose an offer. The goal is not just to make the interface look cleaner, but to make the decision feel more understandable and lower-friction.
-        </p>
-      </div>
-      <div class="story-block">
-        <h3>Challenge</h3>
-        <p>
-          The earlier experience asked users to process several competing elements at once. When information hierarchy is crowded in a choice-heavy flow, even small decisions can feel heavier than they need to.
-        </p>
-      </div>
-      <div class="story-block">
-        <h3>Design Approach</h3>
-        <p>
-          The redesign uses clearer emphasis, more deliberate spacing, and a calmer visual rhythm so the page guides the user toward the most important comparison and the next action without forcing extra effort.
-        </p>
-      </div>
-      <div class="story-block">
-        <h3>What Changed</h3>
-        <p>
-          The after state shows a more directed experience: stronger hierarchy, less visual noise, and more intentional separation between supporting information and the primary decision path.
-        </p>
-      </div>
-    </div>
-    <aside class="details-panel">
-      <h2>Project Details</h2>
-      <ul class="details-list">
-        <li>
-          <strong>Primary Goal</strong>
-          Make offer selection easier to understand at a glance.
-        </li>
-        <li>
-          <strong>Design Lens</strong>
-          Reduce cognitive load while increasing confidence in the next step.
-        </li>
-        <li>
-          <strong>Evidence Slot</strong>
-          Ready for completion rate, drop-off, or user feedback data.
-        </li>
-        <li>
-          <strong>Key Constraint</strong>
-          Improve clarity without losing important supporting context.
-        </li>
-        <li>
-          <strong>Team Notes</strong>
-          Useful place for timeline, collaborators, tools, or ownership notes.
-        </li>
-      </ul>
-    </aside>
-  </section>
-  <section class="improvements-section">
-    <h2>What Improved</h2>
-    <div class="improvements-grid">
-      <article class="improvement-card">
-        <h3>Clearer Hierarchy</h3>
-        <p>The most important information now lands first, reducing the need to search for the next step.</p>
-      </article>
-      <article class="improvement-card">
-        <h3>Simpler Decision Path</h3>
-        <p>The interface better supports comparison and action instead of asking users to decode the page structure.</p>
-      </article>
-      <article class="improvement-card">
-        <h3>More Confident Experience</h3>
-        <p>The overall flow feels more deliberate and supportive, which is especially important in a choice-heavy moment.</p>
-      </article>
-    </div>
-  </section>
-  <section class="research-section">
-    <div class="research-intro">
-      <span class="eyebrow">Research Outcomes</span>
-      <h2>Offer Selection Evidence</h2>
-      <p>
-        This research effort examined how users evaluate refinancing offers when multiple pieces of information compete for attention. Each view is treated as evidence from the same decision moment, helping frame patterns around clarity, confidence, and action.
-      </p>
-    </div>
-    <div class="research-thread" aria-label="Shared research method across the Caribou offer selection work">
-      <div class="research-thread-track">
-        <div class="research-thread-step">
-          <strong>Flow Review</strong>
-          The offer path was reviewed from entry through selection to identify where users needed stronger guidance.
+
+    <div class="case-band alt" id="mobile-experience">
+      <section class="research-section">
+        <div class="research-intro">
+          <span class="eyebrow">Case Study 02</span>
+          <h2>Mobile Experience Direction</h2>
+          <p>
+            Extending the Caribou experience across smaller screens and marketing touchpoints so the product story stays clear before, during, and after the refinancing decision.
+          </p>
         </div>
-        <div class="research-thread-step">
-          <strong>Hierarchy Audit</strong>
-          Key content areas were compared for visual weight, scan order, and clarity around the primary action.
+        <div class="feature-panel">
+          <img class="feature-image" src="assets/images/projects/caribou/caribou mobile redesign.png" alt="Caribou mobile redesign screen">
+          <div class="supporting-image-grid" aria-label="Supporting Caribou digital experience visuals">
+            <img src="assets/images/projects/caribou/caribou website portfolio image.png" alt="Caribou website portfolio view">
+            <img src="assets/images/projects/caribou/caribou hero image.png" alt="Caribou hero artwork">
+          </div>
         </div>
-        <div class="research-thread-step">
-          <strong>Design Synthesis</strong>
-          Findings were grouped into themes that informed a calmer, more directed offer selection experience.
+      </section>
+      <section class="story-grid">
+        <div class="story-panel">
+          <span class="section-label">Mobile Experience</span>
+          <h2>Narrative</h2>
+          <div class="story-block">
+            <h3>Context</h3>
+            <p>
+              The second study focuses on how the Caribou experience translates into mobile and surrounding digital moments. Users may enter the product story from different devices, but they still need the same calm sense of direction.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>Challenge</h3>
+            <p>
+              Mobile layouts have less room for explanation, comparison, and brand reassurance. The design needs to preserve priority, trust, and next-step clarity without relying on a dense desktop layout.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>Design Approach</h3>
+            <p>
+              The direction uses a more focused screen composition, cleaner sequencing, and supporting brand imagery to keep the experience approachable while still pointing users toward meaningful action.
+            </p>
+          </div>
+          <div class="story-block">
+            <h3>What Changed</h3>
+            <p>
+              The page now gives this work its own study instead of burying the mobile visual as one evidence card inside the offer-selection story.
+            </p>
+          </div>
         </div>
-      </div>
+        <aside class="details-panel">
+          <h2>Project Details</h2>
+          <ul class="details-list">
+            <li>
+              <strong>Primary Goal</strong>
+              Make the Caribou experience feel coherent and readable across mobile and supporting web moments.
+            </li>
+            <li>
+              <strong>Design Lens</strong>
+              Responsive hierarchy, scan order, visual focus, and trust-building brand cues.
+            </li>
+            <li>
+              <strong>Evidence Set</strong>
+              Mobile redesign, website view, and hero imagery treated as one connected experience direction.
+            </li>
+            <li>
+              <strong>Outcome Focus</strong>
+              Support a clearer path into the refinancing experience from smaller screens.
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section class="improvements-section">
+        <h2>What Improved</h2>
+        <div class="improvements-grid">
+          <article class="improvement-card">
+            <h3>Responsive Clarity</h3>
+            <p>The mobile direction gives the core product message room to land without asking users to untangle a crowded page.</p>
+          </article>
+          <article class="improvement-card">
+            <h3>Stronger Entry Story</h3>
+            <p>Supporting visuals connect the product experience to a more recognizable Caribou brand moment.</p>
+          </article>
+          <article class="improvement-card">
+            <h3>Cleaner Study Structure</h3>
+            <p>Separating this work into its own section makes the second case study easier to evaluate on its own terms.</p>
+          </article>
+        </div>
+      </section>
+      <section class="research-section">
+        <div class="research-thread" aria-label="Shared research method across the Caribou mobile experience work">
+          <div class="research-thread-track">
+            <div class="research-thread-step">
+              <strong>Screen Review</strong>
+              The mobile direction was evaluated for priority, readability, and the strength of its first impression.
+            </div>
+            <div class="research-thread-step">
+              <strong>Context Mapping</strong>
+              Supporting web and brand visuals were grouped around the same user entry story.
+            </div>
+            <div class="research-thread-step">
+              <strong>Design Synthesis</strong>
+              Findings were organized around responsive clarity, visual focus, and product confidence.
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="evidence-grid">
-      <article class="evidence-card">
-        <span class="label">Evidence 01</span>
-        <div class="map-frame">
-          <img src="assets/images/projects/caribou/Offer selection page - Before.png" alt="Caribou offer selection page before redesign">
-        </div>
-        <h3>Baseline Experience</h3>
-      </article>
-      <article class="evidence-card">
-        <span class="label">Evidence 02</span>
-        <div class="map-frame">
-          <img src="assets/images/projects/caribou/Offer selection page - After.png" alt="Caribou offer selection page after redesign">
-        </div>
-        <h3>Redesigned Flow</h3>
-      </article>
-      <article class="evidence-card">
-        <span class="label">Evidence 03</span>
-        <div class="map-frame">
-          <img src="assets/images/projects/caribou/caribou mobile redesign.png" alt="Caribou mobile redesign screen">
-        </div>
-        <h3>Responsive Direction</h3>
-      </article>
-    </div>
-    <div class="research-story-grid">
-      <article class="research-story-card">
-        <h2>Narrative</h2>
-        <p>
-          The research focused on the point where users need to understand offer differences quickly enough to feel confident choosing a path forward. That moment depends on hierarchy, content grouping, and the way the interface separates primary action from supporting detail.
-        </p>
-        <p>
-          Looking at the before and after states together makes the design shift easier to evaluate without treating the visuals as isolated screens. The outcome is a clearer view of how reduced competition, stronger emphasis, and more deliberate spacing support decision-making.
-        </p>
-      </article>
-      <aside class="research-story-card">
-        <h2>Project Details</h2>
-        <ul class="research-details-list">
-          <li>
-            <strong>Research Lens</strong>
-            Offer comprehension, visual hierarchy, decision confidence, and clarity of next steps.
-          </li>
-          <li>
-            <strong>Evidence Set</strong>
-            Three equal-weight visuals reviewed as part of one offer selection improvement effort.
-          </li>
-          <li>
-            <strong>Outcome Focus</strong>
-            Identify patterns that could reduce uncertainty, support comparison, and make the primary action easier to trust.
-          </li>
-        </ul>
-      </aside>
-    </div>
-  </section>
+  </main>
   <footer>
     <p>&copy; 2026 Your Name. All rights reserved.</p>
 </footer>
