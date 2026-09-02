@@ -11,6 +11,62 @@
     margin: 2rem auto;
     padding: 0 2rem;
   }
+  .geico-overview {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  .overview-card {
+    background: var(--surface);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 2rem;
+  }
+  .overview-card .eyebrow {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--surface);
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .overview-card h1 {
+    color: var(--text);
+    font-size: 2.4rem;
+    margin-bottom: 0.75rem;
+  }
+  .overview-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 820px;
+  }
+  .case-study-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .case-study-link {
+    display: block;
+    border-left: 3px solid var(--accent);
+    padding: 0.15rem 0 0.15rem 1rem;
+    text-decoration: none;
+  }
+  .case-study-link strong {
+    display: block;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+  }
+  .case-study-link span {
+    display: block;
+    color: var(--muted);
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
   .case-study-hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -337,6 +393,7 @@
     margin-bottom: 0.3rem;
   }
   @media (max-width: 900px) {
+    .geico-overview,
     .case-study,
     .story-grid,
     .improvements-section,
@@ -346,6 +403,7 @@
     .case-study-hero,
     .story-grid,
     .improvements-grid,
+    .case-study-links,
     .evidence-grid,
     .research-story-grid {
       grid-template-columns: 1fr;
@@ -375,9 +433,16 @@
     }
   }
   @media (max-width: 640px) {
+    .geico-overview,
     .case-study {
       margin: 1.5rem auto;
       padding: 0 1rem;
+    }
+    .overview-card {
+      padding: 1.5rem;
+    }
+    .overview-card h1 {
+      font-size: 1.9rem;
     }
     .hero-copy {
       padding: 1.5rem;
@@ -427,11 +492,30 @@
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
-  <section class="case-study">
+  <section class="geico-overview">
+    <div class="overview-card">
+      <span class="eyebrow">GEICO Case Studies</span>
+      <h1>Conversational Experience Design</h1>
+      <p>
+        Two related case studies show how GEICO explored conversational support across chatbot flows, Contact Us routing, and a Watson-powered renter's insurance quote experience.
+      </p>
+      <div class="case-study-links" aria-label="GEICO case studies on this page">
+        <a class="case-study-link" href="#chatbot-experience">
+          <strong>AI Chatbot Experience</strong>
+          <span>Support routing, Contact Us flows, and payment and service examples.</span>
+        </a>
+        <a class="case-study-link" href="#insurance-application">
+          <strong>Conversational Insurance Application</strong>
+          <span>Watson-powered renter's insurance quote intake, content and UX experiments, and learnings for IVR, Alexa, chat, and mobile.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="case-study" id="chatbot-experience">
     <div class="case-study-hero">
       <div class="hero-copy">
-        <span class="eyebrow">Chat Experience Comparison</span>
-        <h1>GEICO</h1>
+        <span class="eyebrow">AI Chatbot Experience</span>
+        <h1>Chatbot Support Flow Comparison</h1>
         <p class="summary">
           A case study on GEICO conversational support experiences, including chatbot strategy, tailored Contact Us interactions, and guidance patterns that helped customers find the right service path more quickly.
         </p>
@@ -536,12 +620,12 @@
       </article>
     </div>
   </section>
-  <section class="research-section">
+  <section class="research-section" id="insurance-application">
     <div class="research-intro">
-      <span class="eyebrow">Research Outcomes</span>
-      <h2>Conversational Support Evidence</h2>
+      <span class="eyebrow">Conversational AI Experience</span>
+      <h2>Conversational Insurance Application</h2>
       <p>
-        This work examined how people moved through GEICO support experiences when they needed a clear path to help. The evidence connects chatbot behavior, Contact Us routing, and analytics signals to show where conversational patterns supported customers and where consistency could improve.
+        We launched a brand new experience, using IBM's Watson technology. This AI engine powered a conversational experience for customers quoting renter's insurance. We tested a variety of different experiences with this launch, like approaches to content writing, user experience, and design. Our learnings here informed future experiments with voice (IVR and Alexa), chat, and mobile.
       </p>
     </div>
     <div class="research-thread" aria-label="Shared research method across GEICO chat flows">
