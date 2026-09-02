@@ -269,12 +269,12 @@
   </nav>
   <section class="projects-intro">
     <span class="eyebrow">Independent Work</span>
-    <h1>No-code Projects</h1>
+    <h1>No-Code Projects</h1>
     <p class="summary">
-      A collection of tools I've built from requirements to production, starting with ChatGPT, and ending in VSCode, GitHub, and Firebase.
+      In my free time I've built a handful of tools from requirements to real live web apps. I started with ChatGPT, and all the pieces and parts are now available for me to access via Firebase, VSCode, and GitHub. Each is a simple project, combining HTML, CSS, and JavaScript. I've also built a notification system, using Python.
     </p>
     <p class="focus">
-      I stumbled a bit along the way, and I'm still stumbling. Check out my successes and some failures, and the process I'm using today.
+      I've stumbled a bit along the way, but learning and improving as I stumble. Check out my successes and a failure, and the process I'm using today.
     </p>
   </section>
   <section class="project-showcase" aria-label="Personal project summaries">
@@ -286,8 +286,7 @@
         <span class="tag">Out and About</span>
         <h2>Grocery Planner</h2>
         <p>
-          A household planning concept for organizing upcoming grocery trips, tracking active lists,
-          and making repeat shopping routines easier to manage.
+          A custom web app for creating grocery shopping lists and easy management while I shop
         </p>
         <div class="copy-section">
           <h3 hidden>Grocery Planner notes</h3>
@@ -297,7 +296,7 @@
           </p>
           <h4>What does it do?</h4>
           <p>
-            This tool is a lightweight mobile web app that I use while I shop. I can share it with my household to make a list ahead of time (or create as I go) and check items off when I find them. I can also add things ad hoc. I designed it mobile-first, so it's easy to tap and swipe.
+            This tool is a lightweight mobile web app that I use while I shop. I can share it with my household to make a list ahead of time (or create as I go) and check items off when I find them. I can also add things ad hoc, or pick from a stored list of things we buy all the time. I designed it mobile-first, so it's easy to tap and swipe.
           </p>
           <h4>How does it work?</h4>
           <p>
@@ -317,25 +316,21 @@
         <span class="tag">Around the House</span>
         <h2>Task Tracker</h2>
         <p>
-          A lightweight task dashboard designed to separate overdue, active, and upcoming work so
-          priorities stay visible without adding extra process.
+          A lightweight task dashboard designed to separate overdue, active, and upcoming work around the house. Specific to me, myself, and I.
         </p>
         <div class="copy-section">
           <h3 hidden>Task Tracker notes</h3>
           <h4>What problem does it solve?</h4>
           <p>
-            I'm the only user for this app. I clean my home with no frame of reference - when did I last dust that thing? Should I clean the washing machine? You're supposed to do that, right? I can never remember how long it's been, so I made a basic app with all the chores I do, so I can track them. I had to bid farewell to another paper list, but it was for the best.
+            I'm the only user for this app. I have no idea when I last did whatever household chore, and I'm always adding things to the list (example: my dishwasher has a filter, which I now have to clean). I can never remember how long it's been, so I made a basic web app with all the chores I do, so I can track them.
           </p>
           <h4>What does it do?</h4>
           <p>
-            I captured a list of chores in a basic web app. I mark when I've done something from the list, and the tool gives me an indicator of when it's due soon, overdue, or on track. I started with a baseline estimate of how often I should do that particular task to give me those notifications, which are color-coded.
+            I captured a list of chores in a basic web app. I mark when I've done something from the list, and the tool gives me an indicator of when it's due soon, overdue, or on track. I started with a baseline estimate of how often I should do that particular task, and at a glance I can tell when it's time to do that task again.
           </p>
           <h4>How does it work?</h4>
           <p>
-            It's plain HTML, CSS, and JavaScript, nothing fancy. The backend is powered by Firebase. Google sign-in handles access, and Firestore stores the shared household task list and completion history. It also keeps local browser storage as a fallback. I built this one after the grocery tracker, so I could reuse those patterns.
-          </p>
-          <p>
-            For this tool, the app code lives in a private GitHub repository, so changes can be saved, reviewed, versioned, and recovered over time instead of only existing on one local machine. I hadn't done that with the grocery tool, and I'm considering moving everything to GitHub. I'll have to do that carefully - lesson learned, new standard operating mode created.
+            It's plain HTML, CSS, and JavaScript, nothing fancy. The backend is powered by Firebase. Google sign-in handles access, and Firestore stores my data.  It also keeps local browser storage as a fallback. I reused patterns from a previous app to make life easier. The app code lives in a private GitHub repository. This time, I started in GitHub, created a new standard operating model for myself instead of local build > migrate everything. Never again.
           </p>
         </div>
       </div>
@@ -359,14 +354,11 @@
           </p>
           <h4>What does it do?</h4>
           <p>
-            I get brief email updates three times a day. The tool pulls listed showtimes and compares them with a saved snapshot from the last successful check. The Smithsonian only has about 7 days worth of showtimes posted, so I have no idea when to check back for new dates and times. This system solves the problem.
+            I get brief email updates three times a day. The tool pulls listed showtimes and compares them with a saved snapshot from the last successful check. The Smithsonian only has about 7 days worth of showtimes posted, so I don't need to constantly check for new times or tickets.
           </p>
           <h4>How does it work?</h4>
           <p>
-            I used a no-code approach with ChatGPT. I created requirements and a build plan, and set up both in markdown files. I iterated through the build plan, checking progress and testing all the way through.
-          </p>
-          <p>
-            The result was a small Python tool that looks at the Smithsonian's movie page for The Odyssey, specifically. Everything's built locally, then committed and pushed to my GitHub repo. The repo has a workflow set up to run a GitHub Action three times a day, sending Gmail notifications that report whether new showtimes were found, nothing changed, or the page could not be read. It's also set up to handle errors, like the Smithsonian site showing a verification page.
+            Well, right now it doesn't. The Smithsonian is not a fan of bots, so I'm looking for a workaround. But what in theory, this Python tool should look at Smithsonian's movie page for The Odyssey. I have a GitHub Action that runs three times a day, sending me an email that reports whether new showtimes were found, nothing changed, or the page could not be read. It's also set up to handle errors, like the Smithsonian site showing a verification page. Right now, I'm only getting those errors - but I was able to get tickets and go see the movie, so that worked out nicely.
           </p>
         </div>
       </div>
