@@ -30,7 +30,7 @@ Current maintenance risks are:
 - Navigation markup is copied into every page.
 - Page-specific styles are difficult to search and review because they remain inline.
 - Asset filenames use spaces, uppercase letters, and mixed naming conventions.
-- There is no automated check for broken links, missing assets, or invalid HTML.
+- The repository has a lightweight validator for local links, assets, fragments, and required navigation, but it must be run before content changes are pushed.
 - The Pages workflow publishes the repository root, so files committed to the repository may become public.
 
 ## Recommended End State
@@ -67,6 +67,26 @@ my-project/
 Make one kind of change at a time.
 
 Do not extract CSS, rename images, move workflow files, and edit page copy all in one pass. That makes it much harder to tell what caused a problem if something breaks.
+
+## Standard Pre-Push Check
+
+Run the static-site validator before pushing content, asset, or layout changes:
+
+```text
+node scripts/validate-site.mjs
+```
+
+The command should pass before a change is pushed. It checks all six HTML pages, local `href` and `src` targets, same-page fragments, required navigation destinations, and paths that could escape the site root.
+
+## Lightweight Maintenance Habit
+
+Before each push:
+
+1. Run `node scripts/validate-site.mjs`.
+2. Review `git diff` and `git status` for accidental assets, private documents, credentials, or unrelated changes.
+3. Run `git diff --check` for whitespace errors.
+
+Periodically review the pinned GitHub Actions in `.github/workflows/deploy.yml`. Keep each action pinned to a reviewed commit SHA, retain the release-version comment, and update pins only after checking the upstream release and confirming the workflow still passes.
 
 ## Roles
 
