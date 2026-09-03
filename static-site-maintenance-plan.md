@@ -17,19 +17,21 @@ This project is a static portfolio site. Each page is a separate `.html` file:
 
 The site also has images and videos in the `assets/` folder.
 
-Right now, the HTML pages include a lot of repeated CSS inside each file. This means that a simple design change, like updating the navigation or changing shared spacing, may need to be repeated across several files.
+The shared stylesheet and the GEICO video fallback script have already been extracted:
 
-There is also a GitHub Pages deployment workflow, but it appears to be in the wrong folder:
+- `assets/css/site.css` contains shared tokens, body, navigation, and responsive navigation rules.
+- `assets/js/geico.js` contains the GEICO video fallback behavior.
+- `.github/workflows/deploy.yml` contains the GitHub Pages deployment workflow in the expected location.
 
-```text
-.github/workflows/.github/workflows/deploy.yml
-```
+The HTML pages still contain repeated navigation markup and substantial page-specific inline CSS. A simple design change, such as updating the navigation or shared spacing, can therefore require coordinated edits across several files.
 
-GitHub usually expects workflow files here:
+Current maintenance risks are:
 
-```text
-.github/workflows/deploy.yml
-```
+- Navigation markup is copied into every page.
+- Page-specific styles are difficult to search and review because they remain inline.
+- Asset filenames use spaces, uppercase letters, and mixed naming conventions.
+- There is no automated check for broken links, missing assets, or invalid HTML.
+- The Pages workflow publishes the repository root, so files committed to the repository may become public.
 
 ## Recommended End State
 
@@ -136,37 +138,19 @@ codex/refactor-static-site-structure
 
 This keeps the cleanup separate from the current working version of the site.
 
-### Step 2: Fix the GitHub Workflow Location
+### Step 2: Confirm the Deployment Workflow
 
-Move this file:
-
-```text
-.github/workflows/.github/workflows/deploy.yml
-```
-
-To this location:
+This step is complete. The workflow is currently located at:
 
 ```text
 .github/workflows/deploy.yml
 ```
 
-Reason:
+Keep deployment changes separate from content and styling changes. Before changing the workflow, review its permissions, artifact path, action versions, and the resulting Actions run.
 
-GitHub Actions usually only detects workflow files placed directly inside `.github/workflows/`.
+### Step 3: Maintain the Shared CSS File
 
-Risk:
-
-Once moved, GitHub may start running the deployment workflow on pushes to `main`. That is probably good, but it means deployment problems may become visible.
-
-Check:
-
-- Confirm that `.github/workflows/deploy.yml` exists.
-- Confirm that there is no extra nested `.github/workflows/.github/` folder left behind.
-- Push only after reviewing the change.
-
-### Step 3: Create a Shared CSS File
-
-Create:
+The shared stylesheet already exists at:
 
 ```text
 assets/css/site.css
@@ -183,7 +167,7 @@ Good candidates:
 - Footer styles
 - Shared responsive navigation styles
 
-Do not move page-specific case study styles in the first pass unless they are truly identical across pages.
+Page-specific case study styles remain inline. Move additional rules only when they are clearly shared, and verify every page after each extraction.
 
 Risk:
 
@@ -196,7 +180,7 @@ Check:
 - Confirm the page backgrounds and fonts look right.
 - Confirm the footer still looks right.
 
-### Step 4: Link Each HTML Page to the Shared CSS
+### Step 4: Keep Each HTML Page Linked to Shared CSS
 
 Add this line inside the `<head>` of each HTML file:
 
@@ -204,7 +188,7 @@ Add this line inside the `<head>` of each HTML file:
 <link rel="stylesheet" href="assets/css/site.css">
 ```
 
-Then remove only the CSS rules that were moved into `site.css`.
+All six HTML pages are currently linked to the shared stylesheet. Remove only CSS rules that have actually been moved into `site.css`.
 
 Risk:
 
@@ -219,17 +203,15 @@ Check all six pages:
 - `geico.html`
 - `personal-projects.html`
 
-### Step 5: Move the GEICO Script
+### Step 5: Maintain the GEICO Script
 
-The GEICO page has a small script that handles video fallback behavior.
-
-Move it into:
+The GEICO page's video fallback script is located at:
 
 ```text
 assets/js/geico.js
 ```
 
-Then reference it from `geico.html` before the closing `</body>` tag:
+It is referenced from `geico.html` before the closing `</body>` tag:
 
 ```html
 <script src="assets/js/geico.js"></script>
@@ -287,13 +269,12 @@ Minimum checklist:
 
 Before committing, review the changed files.
 
-Expected changes for the first cleanup pass:
+The initial cleanup is complete. Future focused changes may include:
 
-- New `assets/css/site.css`
-- Updated HTML files with stylesheet links
-- Removed duplicated shared CSS from HTML files
-- Moved GitHub workflow file
-- Possibly new `assets/js/geico.js`
+- Automated link and asset validation
+- Security and deployment hardening
+- Additional shared CSS extraction
+- Asset naming and optimization guidance
 
 Unexpected changes to watch for:
 
@@ -309,9 +290,9 @@ Unexpected changes to watch for:
 Prefer separate commits:
 
 ```text
-Fix GitHub Pages workflow location
-Extract shared site styles
-Move GEICO video fallback script
+Add static-site validation
+Harden static-site deployment
+Refine asset conventions
 ```
 
 This makes it easier to undo one change without undoing everything.
@@ -369,37 +350,12 @@ How to reduce risk:
 
 Keep each pass narrow and commit each successful checkpoint.
 
-## Recommended First VS Code Prompt
+### Recommended Next Prompt
 
-Use this with the ChatGPT extension in VS Code:
-
-```text
-Please help with a conservative maintenance refactor.
-
-Create assets/css/site.css.
-Move only clearly shared CSS from all six HTML files into assets/css/site.css.
-Add <link rel="stylesheet" href="assets/css/site.css"> to each HTML file.
-Do not change page copy.
-Do not rename image or video files.
-Do not redesign the pages.
-Do not introduce a framework or build system.
-Keep page-specific CSS in each HTML file for now.
-After editing, summarize the changed files and any risks.
-```
-
-## Recommended GitHub Workflow Prompt
-
-Use this separately:
-
-```text
-Move the GitHub Pages workflow from .github/workflows/.github/workflows/deploy.yml to .github/workflows/deploy.yml.
-Do not change the workflow contents unless required.
-Remove only the now-empty nested workflow folders if they are empty.
-Show the resulting file structure under .github.
-```
+Use the separate implementation plan in `static-site-growth-plan.md` for validation, security and deployment, asset conventions, and the future generator threshold.
 
 ## Final Recommendation
 
-Start with the smallest useful improvement: fix the workflow location and extract only shared CSS.
+The initial structural cleanup is complete. Start the next pass with automated validation, then address security and deployment safeguards before changing asset names or introducing a generator.
 
 That will make the project easier to maintain while keeping the site simple, readable, and easy to publish with GitHub Pages.
