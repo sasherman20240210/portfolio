@@ -188,7 +188,6 @@
     padding: 0.5rem 0 2rem;
   }
   .case-band .story-grid,
-  .case-band .improvements-section,
   .case-band .research-section {
     margin-top: 1.5rem;
   }
@@ -208,7 +207,6 @@
   }
   .story-panel h2,
   .details-panel h2,
-  .improvements-section h2,
   .research-section h2,
   .research-story-card h2 {
     font-size: 1.35rem;
@@ -224,8 +222,7 @@
     margin-bottom: 0.5rem;
   }
   .story-block p,
-  .details-list li,
-  .improvement-card p {
+  .details-list li {
     color: var(--muted);
     line-height: 1.6;
   }
@@ -252,27 +249,6 @@
     display: block;
     color: var(--text);
     margin-bottom: 0.3rem;
-  }
-  .improvements-section {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-  }
-  .improvements-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-  }
-  .improvement-card {
-    background: var(--surface);
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    padding: 1.4rem;
-  }
-  .improvement-card h3 {
-    font-size: 1rem;
-    color: var(--text);
-    margin-bottom: 0.5rem;
   }
   .research-section {
     max-width: 1100px;
@@ -434,14 +410,12 @@
   @media (max-width: 900px) {
     .case-study,
     .story-grid,
-    .improvements-section,
     .research-section {
       padding: 0 1.5rem;
     }
     .case-study-hero,
     .story-grid,
     .case-index,
-    .improvements-grid,
     .evidence-grid,
     .research-story-grid {
       grid-template-columns: 1fr;
@@ -500,7 +474,6 @@
       height: 260px;
     }
     .story-grid,
-    .improvements-section,
     .research-section {
       margin: 1.5rem auto;
       padding: 0 1rem;
@@ -508,7 +481,6 @@
     }
     .story-panel,
     .details-panel,
-    .improvement-card,
     .research-intro,
     .research-story-card {
       padding: 1.5rem;
@@ -537,10 +509,10 @@
       <div class="hero-copy">
         <h1>Oportun</h1>
         <p class="summary">
-          At Oportun, I delivered more than 40 research projects. Within those projects, I ran 250+ moderated and unmoderated customer research sessions. I know because my managers asked me to count. I worked across the customer-facing website, the mobile app, loan and savings products, and our internal systems.
+          At Oportun, I delivered more than 40 research projects. Within those projects, I ran 250+ moderated and unmoderated customer research sessions. I worked across the customer-facing website, the mobile app, loan and savings products, and our internal systems.
         </p>
         <p class="focus">
-          My two biggest projects were launching something from scratch - two very different somethings. One, was launching our native mobile app. The other was researching a brand new financial product, Oportun's first ever secured loan product. Check out the case studies below.
+          My two biggest projects were launching something from scratch - two very different somethings. One was launching our native mobile app. The other was researching a brand new offering, Oportun's first ever secured loan product. Check out the case studies below.
         </p>
       </div>
     </div>
@@ -649,23 +621,6 @@
           </ul>
         </aside>
       </section>
-      <section class="improvements-section">
-        <h2>What Improved</h2>
-        <div class="improvements-grid">
-          <article class="improvement-card">
-            <h3>Clearer Mobile Flow</h3>
-            <p>The experience better organizes key information so customers can understand where they are, what matters, and what to do next.</p>
-          </article>
-          <article class="improvement-card">
-            <h3>Stronger Decision Support</h3>
-            <p>Important details and actions are framed in a way that helps users move forward with more confidence.</p>
-          </article>
-          <article class="improvement-card">
-            <h3>Better Small-Screen Hierarchy</h3>
-            <p>The app screens prioritize the most useful content first, reducing friction in moments where clarity matters most.</p>
-          </article>
-        </div>
-      </section>
     </div>
 
     <div class="case-band alt" id="location-research">
@@ -695,25 +650,22 @@
         </div>
         <div class="evidence-grid">
           <article class="evidence-card">
-            <span class="label">Evidence 01</span>
+            <span class="label">FoodMaxx/MacArthur</span>
             <div class="map-frame">
               <img src="assets/images/projects/oportun/oportun_foodsco_macarthuroakland.PNG" alt="Google Maps view of an Oportun location near FoodMaxx and MacArthur in Oakland">
             </div>
-            <h3>FoodMaxx / MacArthur</h3>
           </article>
           <article class="evidence-card">
-            <span class="label">Evidence 02</span>
+            <span class="label">Fruitvale Avenue</span>
             <div class="map-frame">
               <img src="assets/images/projects/oportun/oportun_fruitvaleave_viagooglemaps.PNG" alt="Google Maps view of an Oportun location on Fruitvale Avenue">
             </div>
-            <h3>Fruitvale Avenue</h3>
           </article>
           <article class="evidence-card">
-            <span class="label">Evidence 03</span>
+            <span class="label">Sacramento</span>
             <div class="map-frame">
               <img src="assets/images/projects/oportun/oportun_standalone_viagooglemaps.PNG" alt="Google Maps view of a standalone Oportun location">
             </div>
-            <h3>Standalone Location</h3>
           </article>
         </div>
         <div class="research-story-grid">
