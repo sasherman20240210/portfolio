@@ -34,7 +34,7 @@ Reduce avoidable browser and deployment risks without adding application complex
 
 1. Add `rel="noopener noreferrer"` to every external link using `target="_blank"`.
 2. Review the GitHub Pages artifact boundary so private notes, source material, secrets, and unrelated repository files cannot be published accidentally.
-3. Consider pinning third-party GitHub Actions to reviewed commit SHAs. Document the update and review process if this is adopted.
+3. Pin third-party GitHub Actions to reviewed commit SHAs. The current workflow includes version comments beside each SHA; update those pins only after checking the upstream release tag and reviewing the release changes.
 4. Keep workflow permissions limited to the permissions required for Pages deployment.
 5. Document that GitHub Pages does not provide repository-controlled response headers. If CSP, Referrer-Policy, Permissions-Policy, or frame protection becomes necessary, use a host or CDN that permits those headers.
 6. Treat the Firebase-backed personal applications as separate security reviews; portfolio copy does not secure those applications.
