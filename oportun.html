@@ -206,8 +206,7 @@
     padding: 2rem;
   }
   .story-panel h2,
-  .research-section h2,
-  .research-story-card h2 {
+  .research-section h2 {
     font-size: 1.35rem;
     color: var(--text);
     margin-bottom: 1rem;
@@ -343,19 +342,7 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  .research-story-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  .research-story-card {
-    background: var(--surface);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    padding: 2rem;
-  }
-  .research-story-card p,
+  .story-panel p,
   .research-details-list li {
     color: var(--muted);
     line-height: 1.6;
@@ -390,8 +377,7 @@
     .case-study-hero,
     .story-grid,
     .case-index,
-    .evidence-grid,
-    .research-story-grid {
+    .evidence-grid {
       grid-template-columns: 1fr;
     }
     .case-link-card img {
@@ -454,8 +440,7 @@
       gap: 1.25rem;
     }
     .story-panel,
-    .research-intro,
-    .research-story-card {
+    .research-intro {
       padding: 1.5rem;
     }
     .map-frame {
@@ -609,8 +594,8 @@
             </div>
           </div>
         </div>
-        <div class="research-story-grid">
-          <article class="research-story-card">
+        <div class="story-panel">
+          <article>
             <h2>Narrative</h2>
             <p>
               The research focused on how Oportun locations show up in everyday search and map contexts, where customers may be evaluating convenience, proximity, and credibility before deciding whether to visit.
@@ -619,7 +604,7 @@
               Looking across three location examples made it easier to compare environmental cues without treating any single branch as the main story. The outcome is a clearer picture of how visibility, surrounding businesses, and map presentation can shape customer expectations.
             </p>
           </article>
-          <aside class="research-story-card">
+          <aside>
             <h2>Project Details</h2>
             <ul class="research-details-list">
               <li>

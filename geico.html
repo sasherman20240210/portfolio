@@ -164,8 +164,7 @@
   }
   .story-panel h2,
   .improvements-section h2,
-  .research-section h2,
-  .research-story-card h2 {
+  .research-section h2 {
     font-size: 1.35rem;
     color: var(--text);
     margin-bottom: 1rem;
@@ -328,24 +327,12 @@
     line-height: 1.6;
     padding: 0 1rem 1.2rem;
   }
-  .research-story-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  .research-story-card {
-    background: var(--surface);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    padding: 2rem;
-  }
-  .research-story-card p,
+  .story-panel p,
   .research-details-list li {
     color: var(--muted);
     line-height: 1.6;
   }
-  .research-story-card p + p {
+  .story-panel p + p {
     margin-top: 1rem;
   }
   .research-details-list {
@@ -378,8 +365,7 @@
     .story-grid,
     .improvements-grid,
     .case-study-links,
-    .evidence-grid,
-    .research-story-grid {
+    .evidence-grid {
       grid-template-columns: 1fr;
     }
     .research-image-frame {
@@ -442,8 +428,7 @@
     }
     .story-panel,
     .improvement-card,
-    .research-intro,
-    .research-story-card {
+    .research-intro {
       padding: 1.5rem;
     }
     .research-image-frame {
@@ -596,8 +581,8 @@
         </p>
       </article>
     </div>
-    <div class="research-story-grid">
-      <article class="research-story-card">
+    <div class="story-panel">
+      <article>
         <h2>Narrative</h2>
         <p>
           The research focused on the parts of the chat experience that shape confidence before a user reaches a final answer. Entry cues, message rhythm, and the handoff between automated guidance and support options all affect whether the experience feels helpful or fragmented.
@@ -606,7 +591,7 @@
           Looking at two flows together makes the differences easier to evaluate without turning either clip into an isolated example. The result is a clearer read on which interaction patterns should stay consistent across GEICO support moments.
         </p>
       </article>
-      <aside class="research-story-card">
+      <aside>
         <h2>Project Details</h2>
         <ul class="research-details-list">
           <li>
