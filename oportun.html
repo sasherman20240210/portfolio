@@ -196,7 +196,7 @@
     margin: 2rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
   }
   .story-panel {
@@ -206,7 +206,6 @@
     padding: 2rem;
   }
   .story-panel h2,
-  .details-panel h2,
   .research-section h2,
   .research-story-card h2 {
     font-size: 1.35rem;
@@ -221,34 +220,9 @@
     color: var(--text);
     margin-bottom: 0.5rem;
   }
-  .story-block p,
-  .details-list li {
+  .story-block p {
     color: var(--muted);
     line-height: 1.6;
-  }
-  .details-panel {
-    background: var(--surface);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    padding: 2rem;
-  }
-  .details-list {
-    list-style: none;
-    display: grid;
-    gap: 1rem;
-  }
-  .details-list li {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .details-list li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  .details-list strong {
-    display: block;
-    color: var(--text);
-    margin-bottom: 0.3rem;
   }
   .research-section {
     max-width: 1100px;
@@ -480,7 +454,6 @@
       gap: 1.25rem;
     }
     .story-panel,
-    .details-panel,
     .research-intro,
     .research-story-card {
       padding: 1.5rem;
@@ -599,27 +572,6 @@
             </p>
           </div>
         </div>
-        <aside class="details-panel">
-          <h2>Project Details</h2>
-          <ul class="details-list">
-            <li>
-              <strong>Primary Goal</strong>
-              Improve clarity and confidence in the Oportun Native Mobile App experience.
-            </li>
-            <li>
-              <strong>Design Lens</strong>
-              Mobile task flow, information hierarchy, customer comprehension, and trust.
-            </li>
-            <li>
-              <strong>Evidence Slot</strong>
-              Ready for usability insights, task-completion findings, comprehension metrics, or product-performance data.
-            </li>
-            <li>
-              <strong>Key Constraint</strong>
-              Make complex financial information feel approachable without oversimplifying important decisions.
-            </li>
-          </ul>
-        </aside>
       </section>
     </div>
 

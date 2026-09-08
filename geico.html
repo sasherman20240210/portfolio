@@ -153,7 +153,7 @@
     margin: 2rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
   }
   .story-panel {
@@ -163,7 +163,6 @@
     padding: 2rem;
   }
   .story-panel h2,
-  .details-panel h2,
   .improvements-section h2,
   .research-section h2,
   .research-story-card h2 {
@@ -180,34 +179,9 @@
     margin-bottom: 0.5rem;
   }
   .story-block p,
-  .details-list li,
   .improvement-card p {
     color: var(--muted);
     line-height: 1.6;
-  }
-  .details-panel {
-    background: var(--surface);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    padding: 2rem;
-  }
-  .details-list {
-    list-style: none;
-    display: grid;
-    gap: 1rem;
-  }
-  .details-list li {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .details-list li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  .details-list strong {
-    display: block;
-    color: var(--text);
-    margin-bottom: 0.3rem;
   }
   .improvements-section {
     max-width: 1100px;
@@ -467,7 +441,6 @@
       gap: 1.25rem;
     }
     .story-panel,
-    .details-panel,
     .improvement-card,
     .research-intro,
     .research-story-card {
@@ -576,31 +549,6 @@
         </p>
       </div>
     </div>
-    <aside class="details-panel">
-      <h2>Project Details</h2>
-      <ul class="details-list">
-        <li>
-          <strong>Primary Goal</strong>
-          Improve clarity and consistency across GEICO conversational support experiences.
-        </li>
-        <li>
-          <strong>Role</strong>
-          Senior Digital Designer / conversational UX strategy, content guidance, analytics-informed evaluation.
-        </li>
-        <li>
-          <strong>Methods</strong>
-          Chatbot review, flow comparison, Adobe Analytics feedback loops, conversational-content guidelines, cross-application team support.
-        </li>
-        <li>
-          <strong>Systems</strong>
-          GEICO chatbot, Contact Us modal, voice assistant, IVR, and customer-facing support applications.
-        </li>
-        <li>
-          <strong>Evidence</strong>
-          Portfolio source files support Contact Us modal work, Adobe Analytics logging, chatbot observations, and conversational-content guidelines.
-        </li>
-      </ul>
-    </aside>
   </section>
   <section class="research-section" id="insurance-application">
     <div class="research-intro">

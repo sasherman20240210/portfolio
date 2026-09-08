@@ -191,7 +191,7 @@
     margin: 2rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
   }
   .story-panel {
@@ -202,7 +202,6 @@
     padding: 2rem;
   }
   .story-panel h2,
-  .details-panel h2,
   .improvements-section h2,
   .research-section h2,
   .research-story-card h2 {
@@ -219,35 +218,9 @@
     margin-bottom: 0.5rem;
   }
   .story-block p,
-  .details-list li,
   .improvement-card p {
     color: var(--muted);
     line-height: 1.6;
-  }
-  .details-panel {
-    background: var(--surface);
-    border: 1px solid rgba(8,24,73,0.12);
-    border-radius: 16px;
-    box-shadow: 0 8px 26px rgba(8,24,73,0.14);
-    padding: 2rem;
-  }
-  .details-list {
-    list-style: none;
-    display: grid;
-    gap: 1rem;
-  }
-  .details-list li {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .details-list li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  .details-list strong {
-    display: block;
-    color: var(--text);
-    margin-bottom: 0.3rem;
   }
   .improvements-section {
     max-width: 1100px;
@@ -516,7 +489,6 @@
       gap: 1.25rem;
     }
     .story-panel,
-    .details-panel,
     .improvement-card,
     .research-intro,
     .research-story-card {
@@ -626,31 +598,6 @@
             </p>
           </div>
         </div>
-        <aside class="details-panel">
-          <h2>Project Details</h2>
-          <ul class="details-list">
-            <li>
-              <strong>Primary Goal</strong>
-              Help customers compare refinance offers and continue with confidence.
-            </li>
-            <li>
-              <strong>Product Moment</strong>
-              Mobile offer selection after customers are shown refinance terms.
-            </li>
-            <li>
-              <strong>Design Lens</strong>
-              Offer hierarchy, comparison clarity, scan order, financial confidence, and next-step comprehension.
-            </li>
-            <li>
-              <strong>Funnel Context</strong>
-              Offer selection connects customers shown refinance offers to applications sent to lenders for review.
-            </li>
-            <li>
-              <strong>Evidence to Add</strong>
-              Use completion, offer-selection, lender-submission, or drop-off data if available.
-            </li>
-          </ul>
-        </aside>
       </section>
     </div>
 
@@ -700,27 +647,6 @@
             </p>
           </div>
         </div>
-        <aside class="details-panel">
-          <h2>Project Details</h2>
-          <ul class="details-list">
-            <li>
-              <strong>Primary Goal</strong>
-              Make the Caribou experience feel coherent and readable across mobile and supporting web moments.
-            </li>
-            <li>
-              <strong>Design Lens</strong>
-              Responsive hierarchy, scan order, visual focus, and trust-building brand cues.
-            </li>
-            <li>
-              <strong>Evidence Set</strong>
-              Mobile redesign, website view, and hero imagery treated as one connected experience direction.
-            </li>
-            <li>
-              <strong>Outcome Focus</strong>
-              Support a clearer path into the refinancing experience from smaller screens.
-            </li>
-          </ul>
-        </aside>
       </section>
       <section class="research-section">
         <div class="research-thread" aria-label="Shared research method across the Caribou mobile experience work">
