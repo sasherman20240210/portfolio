@@ -154,38 +154,6 @@
   .case-band .research-section {
     margin-top: 1.5rem;
   }
-  .feature-panel {
-    background: rgba(255,255,255,0.7);
-    border: 1px solid rgba(8,24,73,0.12);
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(8,24,73,0.12);
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .feature-image {
-    width: 100%;
-    height: 520px;
-    object-fit: contain;
-    background: rgba(8,24,73,0.05);
-    border: 1px solid rgba(8,24,73,0.12);
-    border-radius: 12px;
-    padding: 1rem;
-  }
-  .supporting-image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-  .supporting-image-grid img {
-    width: 100%;
-    height: 260px;
-    object-fit: contain;
-    background: var(--surface);
-    border: 1px solid rgba(8,24,73,0.12);
-    border-radius: 12px;
-    padding: 1rem;
-  }
   .story-grid {
     max-width: 1100px;
     margin: 2rem auto;
@@ -323,14 +291,14 @@
   }
   .evidence-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
   }
   .evidence-card {
     background: var(--surface);
-    border: 1px solid rgba(8,24,73,0.12);
+    border: 1px solid rgba(8,24,73,0.16);
     border-radius: 14px;
-    box-shadow: 0 8px 26px rgba(8,24,73,0.14);
+    box-shadow: 0 14px 34px rgba(8,24,73,0.14);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -345,7 +313,7 @@
     color: var(--accent);
   }
   .map-frame {
-    height: 340px;
+    height: 560px;
     background: rgba(8,24,73,0.05);
     padding: 1rem;
   }
@@ -362,7 +330,12 @@
     color: var(--text);
     padding: 0 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .evidence-card p {
+    color: var(--muted);
+    line-height: 1.6;
+    padding: 0 1rem 1.2rem;
   }
   .research-story-grid {
     display: grid;
@@ -415,15 +388,10 @@
     .case-index,
     .improvements-grid,
     .evidence-grid,
-    .research-story-grid,
-    .supporting-image-grid {
+    .research-story-grid {
       grid-template-columns: 1fr;
     }
-    .feature-image {
-      height: 440px;
-    }
-    .case-link-card img,
-    .supporting-image-grid img {
+    .case-link-card img {
       height: 320px;
     }
     .comparison-card img {
@@ -473,13 +441,8 @@
     .comparison-card img {
       height: 300px;
     }
-    .case-link-card img,
-    .supporting-image-grid img {
+    .case-link-card img {
       height: 260px;
-    }
-    .feature-image {
-      height: 360px;
-      padding: 0.75rem;
     }
     .story-grid,
     .improvements-section,
@@ -551,7 +514,7 @@
           <span class="eyebrow">Case Study 01</span>
           <h2>Mobile Offer Selection Redesign</h2>
           <p>
-            Redesigning Caribou's mobile offer-selection experience so customers could compare refinance options more confidently and understand the path from offer review to lender submission.
+            Our task was to redesign Caribou's offer selection experience so customers could easily compare refinance options and boost conversion rates.
           </p>
         </div>
         <div class="comparison-panel">
@@ -610,12 +573,27 @@
             Extending the Caribou experience across smaller screens and marketing touchpoints so the product story stays clear before, during, and after the refinancing decision.
           </p>
         </div>
-        <div class="feature-panel">
-          <img class="feature-image" src="assets/images/projects/caribou/caribou mobile redesign.png" alt="Caribou mobile redesign screen">
-          <div class="supporting-image-grid" aria-label="Supporting Caribou digital experience visuals">
-            <img src="assets/images/projects/caribou/caribou website portfolio image.png" alt="Caribou website portfolio view">
-            <img src="assets/images/projects/caribou/caribou hero image.png" alt="Caribou hero artwork">
-          </div>
+        <div class="evidence-grid">
+          <article class="evidence-card">
+            <span class="label">Mobile Redesign</span>
+            <div class="map-frame">
+              <img src="assets/images/projects/caribou/internal workflow obscured.png" alt="Obscured Caribou internal workflow screen">
+            </div>
+            <h3>Focused Small-Screen Flow</h3>
+            <p>
+              The mobile redesign evidence can be used to show how the refinancing story holds together on a smaller screen, with clearer hierarchy and a calmer path toward the next decision.
+            </p>
+          </article>
+          <article class="evidence-card">
+            <span class="label">Website Portfolio View</span>
+            <div class="map-frame">
+              <img src="assets/images/projects/caribou/LA Workflow as recipe.png" alt="Caribou LA workflow as recipe screen">
+            </div>
+            <h3>Marketing Context</h3>
+            <p>
+              The website view connects the mobile direction back to the broader product narrative, showing how entry points can reinforce trust before a user starts comparing refinancing options.
+            </p>
+          </article>
         </div>
       </section>
       <section class="story-grid">
