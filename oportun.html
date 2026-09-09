@@ -300,10 +300,34 @@
     color: var(--text);
     font-size: 0.95rem;
   }
-  .evidence-grid {
+  .evidence-feature {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.4fr);
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+  .evidence-feature .research-thread {
+    margin-bottom: 0;
+  }
+  .evidence-feature .research-thread-track {
+    grid-template-columns: 1fr;
+  }
+  .evidence-feature .research-thread-track::before {
+    top: 1.15rem;
+    bottom: 1.15rem;
+    left: 1.15rem;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+  .evidence-feature .research-thread-step {
+    grid-template-columns: 2.3rem 1fr;
+    justify-items: start;
+    text-align: left;
+    column-gap: 0.75rem;
+  }
+  .evidence-feature .research-thread-step::before {
+    grid-row: 1 / span 2;
   }
   .evidence-card {
     background: var(--surface);
@@ -377,7 +401,7 @@
     .case-study-hero,
     .story-grid,
     .case-index,
-    .evidence-grid {
+    .evidence-feature {
       grid-template-columns: 1fr;
     }
     .case-link-card img {
@@ -488,7 +512,7 @@
         <div class="case-link-content">
           <span class="label">Case Study 02</span>
           <h2>Discovery: New Product Offering</h2>
-          <p>Conducting live interviews at Oportun stores, to understand how customesr and staff will receive a new type of personal loan. Pictured above, the Fruitvale Ave location in Oakland, CA</p>
+          <p>Conducting live interviews at Oportun stores, to understand customer and staff perception of a new type of personal loan. Pictured above, the Fruitvale Ave location in Oakland, CA</p>
         </div>
       </a>
     </div>
@@ -569,28 +593,28 @@
             Oportun decided to offer a secured personal loan product to reach a broader customer base. This product would require a a vehicle as collateral, and our team was assigned to understand customers' familiarity with the concept, how Oportun could introduce it to customers who qualified, and how to support store associates with the new product.
           </p>
         </div>
-        <div class="evidence-grid">
+        <div class="evidence-feature">
           <article class="evidence-card">
             <span class="label">Foothill Blvd, Oakland</span>
             <div class="map-frame">
               <img src="assets/images/projects/oportun/oportun_standalone_viagooglemaps.PNG" alt="Google Maps view of a standalone Oportun location">
             </div>
           </article>
-        </div>
-        <div class="research-thread" aria-label="Shared research method across all three locations">
-          <h2>Research Process</h2>
-          <div class="research-thread-track">
-            <div class="research-thread-step">
-              <strong>Preparation</strong>
-              I coordinated with store managers in three different Oakland, CA locations for our team to talk with staff and customers, in person. We developed and shared research plans ahead of time.
-            </div>
-            <div class="research-thread-step">
-              <strong>On Site Sessions</strong>
-              On site, we discussed how customers used and purchased their vehicles, when they'd taken out their loans with Oportun and for what, and the concept of a collateralized loan. We wanted to know what concerns they had, and if this was a product they'd ever consider. We asked staff members how they might explain this product, the daily store environment, and the strengths and weaknesses of this kind of product.
-            </div>
-            <div class="research-thread-step">
-              <strong>Back at HQ...</strong>
-              We reviewed all of our transcripts and notes, put together our themes and most critical learnings, and pulled out our immediate actions and next steps, along with longer term considerations. Quotes and recordings were most critical to communicating our findings.
+          <div class="research-thread" aria-label="Shared research method across all three locations">
+            <h2>Research Process</h2>
+            <div class="research-thread-track">
+              <div class="research-thread-step">
+                <strong>Preparation</strong>
+                I coordinated with store managers in three different Oakland, CA locations for our team to talk with staff and customers, in person. We developed and shared research plans ahead of time.
+              </div>
+              <div class="research-thread-step">
+                <strong>On Site Sessions</strong>
+                On site, we discussed how customers used and purchased their vehicles, when they'd taken out their loans with Oportun and for what, and the concept of a collateralized loan. We wanted to know what concerns they had, and if this was a product they'd ever consider. We asked staff members how they might explain this product, the daily store environment, and the strengths and weaknesses of this kind of product.
+              </div>
+              <div class="research-thread-step">
+                <strong>Back at HQ...</strong>
+                We reviewed all of our transcripts and notes, put together our themes and most critical learnings, and pulled out our immediate actions and next steps, along with longer term considerations. Quotes and recordings were most critical to communicating our findings.
+              </div>
             </div>
           </div>
         </div>
