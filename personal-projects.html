@@ -12,7 +12,8 @@
     box-shadow: 0 16px 42px rgba(8,24,73,0.22);
     max-width: 900px;
     margin: 3rem auto 2rem;
-    padding: 3rem 2rem;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
+    width: min(900px, calc(100% - 2rem));
   }
   .projects-intro .eyebrow {
     display: inline-block;
@@ -25,15 +26,16 @@
   }
   .projects-intro h1 {
     color: var(--surface);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     margin-bottom: 0.8rem;
   }
   .projects-intro .summary,
   .projects-intro .focus {
     color: var(--border);
-    font-size: 1.08rem;
+    font-size: clamp(0.98rem, 1.7vw, 1.08rem);
     line-height: 1.7;
-    max-width: 640px;
+    max-width: 780px;
+    width: 100%;
   }
   .projects-intro .summary {
     margin-bottom: 1rem;
@@ -184,12 +186,13 @@
   @media (max-width: 900px) {
     .projects-intro,
     .project-showcase {
-      padding: 0 1.5rem;
+      padding-left: clamp(1rem, 3vw, 1.5rem);
+      padding-right: clamp(1rem, 3vw, 1.5rem);
     }
     .projects-intro {
-      padding-top: 2.5rem;
-      padding-bottom: 2.5rem;
-      width: calc(100% - 3rem);
+      padding-top: clamp(2rem, 5vw, 2.5rem);
+      padding-bottom: clamp(2rem, 5vw, 2.5rem);
+      width: min(900px, calc(100% - 2rem));
     }
     .showcase-item,
     .showcase-item.reverse,
@@ -274,13 +277,13 @@
       In my free time I've built a handful of tools from requirements to real live web apps. I started with ChatGPT, and all the pieces and parts are now available for me to access via Firebase, VSCode, and GitHub. Each is a simple project, combining HTML, CSS, and JavaScript. I've also built a notification system, using Python.
     </p>
     <p class="focus">
-      I've stumbled a bit along the way, but learning and improving as I stumble. Check out my successes and a failure, and the process I'm using today.
+      I've stumbled a bit along the way, but learning and improving as I stumble. Check out my successes and a failure.
     </p>
   </section>
   <section class="project-showcase" aria-label="Personal project summaries">
     <article class="showcase-item compact">
       <div class="phone-shot">
-        <img src="assets/images/projects/personal-projects/grocery landing.png" alt="Grocery planning app landing view">
+        <img src="assets/images/projects/personal-projects/grocery_list_sept_12.png" alt="Grocery planning app landing view">
       </div>
       <div class="showcase-copy">
         <span class="tag">Out and About</span>
