@@ -242,6 +242,7 @@
     width: 100%;
   }
   .research-thread {
+    display: none;
     background: rgba(255,255,255,0.78);
     border: 1px solid var(--background);
     border-radius: 14px;
@@ -555,7 +556,7 @@
       <span class="eyebrow">Conversational AI Experience</span>
       <h2>Conversational Insurance Application</h2>
       <p>
-        We launched a brand new experience, using IBM's Watson technology. This AI engine powered a conversational experience for customers quoting renters insurance. We tested a variety of different experiences with this launch, like approaches to content writing, user experience, and design. Our learnings here informed future experiments with voice (IVR and Alexa), chat, and mobile.
+        We launched a brand new experience for quoting renters insurance, using IBM's Watson technology. The goal was for customers to get the sense they were talking with an agent. Content needed to be friendly, the back-and-forth seamless when possible. We had no research budget, no designer, and no experience. All things considered, we did pretty well.  
       </p>
     </div>
     <div class="research-thread" aria-label="Shared research method across GEICO chat flows">
@@ -576,23 +577,23 @@
     </div>
     <div class="evidence-grid">
       <article class="evidence-card">
-        <span class="label">Information Change Buttons</span>
+        <span class="label">UI Element: Dropdowns</span>
         <div class="research-image-frame">
-          <img src="assets/images/projects/geico/buttons cropped.png" alt="GEICO research image showing cropped button states">
+          <img src="assets/images/projects/geico/coverages.png" alt="GEICO research image showing coverage states">
         </div>
-        <h3>Support Path Visibility</h3>
+        <h3>Choosing Coverage Amounts</h3>
         <p>
-          The button-state evidence can be used to discuss how interface cues shape customer understanding of available support routes. This is a good place to explain whether users could tell which option applied to their situation and how the interaction reduced uncertainty.
+          We had a lot of debate about how 'conversational' this tool should be. There were a few places where it just didn't make sense, and coverages was one of them. We couldn't expect a customer to know what to ask, or to know what was available to them, so we insisted on adding more traditional elements like dropdowns. THis approach also allowed us to meet our legal and compliance requirements.
         </p>
       </article>
       <article class="evidence-card">
-        <span class="label">In-Flow Tooltip</span>
+        <span class="label">UI Element: Tooltip</span>
         <div class="research-image-frame">
           <img src="assets/images/projects/geico/tooltip cropped.png" alt="GEICO research image showing a cropped tooltip interaction">
         </div>
-        <h3>Contextual Guidance</h3>
+        <h3>Help in a Familiar Package</h3>
         <p>
-          The tooltip evidence can be used to show how small guidance moments helped curious or uncertain customers understand what the interface was asking for before they committed to a next step.
+          We wanted to give users access to help in a way they would understand. They were able to break in and ask a question at any time, but this was 2016 - chat experiences like this weren't common. We placed tooltips in critical spots, where we thought customers might need them. 
         </p>
       </article>
     </div>
