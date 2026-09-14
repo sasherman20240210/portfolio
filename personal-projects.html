@@ -274,10 +274,10 @@
     <span class="eyebrow">Independent Work</span>
     <h1>No-Code Projects</h1>
     <p class="summary">
-      In my free time I've built a handful of tools from requirements to real live web apps. I started with ChatGPT, and all the pieces and parts are now available for me to access via Firebase, VSCode, and GitHub. Each is a simple project, combining HTML, CSS, and JavaScript. I've also built a notification system, using Python.
+      In my free time I've built a handful of tools from requirements to real live web apps. I started with ChatGPT, and all the pieces and parts are now available for me to access via Firebase, VSCode, and GitHub. Each is a simple project, combining HTML, CSS, and JavaScript. I've also built a notification tool, using Python.
     </p>
     <p class="focus">
-      I've stumbled a bit along the way, but learning and improving as I stumble. Check out my successes and a failure.
+      I've stumbled a bit along the way, but I'm learning and improving as I stumble. Check out my successes and a failure.
     </p>
   </section>
   <section class="project-showcase" aria-label="Personal project summaries">
@@ -289,24 +289,24 @@
         <span class="tag">Out and About</span>
         <h2>Grocery Planner</h2>
         <p>
-          A custom web app for creating grocery shopping lists and easy management while I shop
+          A custom web app for creating grocery shopping lists
         </p>
         <div class="copy-section">
           <h3 hidden>Grocery Planner notes</h3>
           <h4>What problem does it solve?</h4>
           <p>
-            I like paper grocery lists. My household doesn't. We've tried note-taking apps and a shared MS CoPilot app for tracking. They're all terrible. I stand by my notes, but I tried my hand at building a custom mobile web tool because I'm magnanimous but very selfish. I wanted a personalized solution.
+            I like paper grocery lists. My household doesn't. We've tried note-taking apps and a shared MS CoPilot tool for tracking. They're all terrible. I stand by my notes, but I tried my hand at building my own custom tool because I'm magnanimous but very selfish.
           </p>
           <h4>What does it do?</h4>
           <p>
-            This tool is a lightweight mobile web app that I use while I shop. I can share it with my household to make a list ahead of time (or create as I go) and check items off when I find them. I can also add things ad hoc, or pick from a stored list of things we buy all the time. I designed it mobile-first, so it's easy to tap and swipe.
+            This is a lightweight mobile web app that I use while I shop. I make a list ahead of time, and in-store I tap and check off items as I go. Add things, remove things, make notes as I need. 
           </p>
           <h4>How does it work?</h4>
           <p>
-            I starting by loading up a list of the things we buy most often, and taking a guess at how often we buy them (something like, spinach every 7 days).
+            It's shared with my household, so multiple people can make lists and use the same list at once. I added a 'feedback' button, so any time someone spots something that doesn't work or needs updating, they can let me know. 
           </p>
           <p>
-            While I shop, I can check items off or put them back if I make a mistake. The app is tracking my purchase history and with enough data, it will make suggestions on when to buy something again (or suggest where my first guess could be better - maybe buy that spinach every 30 days because I'm only pretending to be healthy). The suggestions are basic by design, like 'buy now,' 'buy soon', or 'stocked.' With my 'tracked' items, I can just open the fridge and the pantry with my set list ready to go, instead of trying to remember what I might need.
+            I started by loading up a list of the things we buy most often to make life easier. The app is tracking my purchase history and with enough data, it will make suggestions on when to buy something again. The suggestions are basic by design, like 'buy now,' 'buy soon', or 'stocked.'
           </p>
         </div>
       </div>
@@ -319,21 +319,21 @@
         <span class="tag">Around the House</span>
         <h2>Task Tracker</h2>
         <p>
-          A lightweight task dashboard designed to separate overdue, active, and upcoming work around the house. Specific to me, myself, and I.
+          A lightweight task dashboard designed to track work around the house. 
         </p>
         <div class="copy-section">
           <h3 hidden>Task Tracker notes</h3>
           <h4>What problem does it solve?</h4>
           <p>
-            I'm the only user for this app. I have no idea when I last did whatever household chore, and I'm always adding things to the list (example: my dishwasher has a filter, which I now have to clean). I can never remember how long it's been, so I made a basic web app with all the chores I do, so I can track them.
+            I have no idea when I last did whatever household chore, and I'm always adding things to the list. I can never remember how long it's been, so I made a basic web app with all the chores I do, and now Itrack them.
           </p>
           <h4>What does it do?</h4>
           <p>
-            I captured a list of chores in a basic web app. I mark when I've done something from the list, and the tool gives me an indicator of when it's due soon, overdue, or on track. I started with a baseline estimate of how often I should do that particular task, and at a glance I can tell when it's time to do that task again.
+            I captured a list of chores, and now I mark when I've done something from the list. The tool gives me an indicator of when it's due soon, overdue, or on track. I started with a baseline estimate of how often I should do that particular task, and at a glance I can tell when it's time to do that task again.
           </p>
           <h4>How does it work?</h4>
           <p>
-            It's plain HTML, CSS, and JavaScript, nothing fancy. The backend is powered by Firebase. Google sign-in handles access, and Firestore stores my data.  It also keeps local browser storage as a fallback. I reused patterns from a previous app to make life easier. The app code lives in a private GitHub repository. This time, I started in GitHub, created a new standard operating model for myself instead of local build > migrate everything. Never again.
+            It's plain HTML, CSS, and JavaScript, nothing fancy. The backend is powered by Firebase. Google sign-in handles access, and Firestore stores my data.  I'm the only person using this tool, unlike the grocery app. 
           </p>
         </div>
       </div>
@@ -346,8 +346,7 @@
         <span class="tag">Time Saving</span>
         <h2>Movie Showtime Notifications</h2>
         <p>
-          A scheduled email workflow that checks Smithsonian IMAX showtimes and reports when new
-          tickets are available, nothing changed, or the page could not be read.
+          A scheduled email workflow that checks Smithsonian IMAX showtimes
         </p>
         <div class="copy-section">
           <h3 hidden>Showtime Notifications notes</h3>
@@ -361,7 +360,7 @@
           </p>
           <h4>How does it work?</h4>
           <p>
-            Well, right now it doesn't. The Smithsonian is not a fan of bots, so I'm looking for a workaround. But what in theory, this Python tool should look at Smithsonian's movie page for The Odyssey. I have a GitHub Action that runs three times a day, sending me an email that reports whether new showtimes were found, nothing changed, or the page could not be read. It's also set up to handle errors, like the Smithsonian site showing a verification page. Right now, I'm only getting those errors - but I was able to get tickets and go see the movie, so that worked out nicely.
+            Well, right now it doesn't. The Smithsonian is not a fan of bots, so I'm looking for a workaround. In theory, this Python tool should look at Smithsonian's movie page for The Odyssey, and a GitHub Action should run, sending me an email that reports whether new showtimes were found, nothing changed, or the page could not be read. It's also set up to handle errors, like the Smithsonian site showing a verification page. Right now, I'm only getting those errors. Things happen. 
           </p>
         </div>
       </div>
