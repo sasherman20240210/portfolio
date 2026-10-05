@@ -1,13 +1,13 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --background: #ECDFD2;
+  --background: #DDECFC;
   --surface: #FFFFFF;
-  --text: #081849;
-  --muted: #5E5A63;
-  --accent: #5F3475;
-  --accent-soft: #213885;
-  --border: #ECDFD2;
+  --text: #214D8C;
+  --muted: #214D8C;
+  --accent: #2B8689;
+  --accent-soft: #2B8689;
+  --border: #DDECFC;
 }
 
 body {
