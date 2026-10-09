@@ -35,11 +35,31 @@
   .subtitle { color: var(--border); margin-bottom: 1.5rem; font-size: 1.1rem; }
   .subtitle a { color: inherit; }
   .bio { color: var(--surface); line-height: 1.6; margin-bottom: 1.5rem; }
-  .bio-list {
+  .bio-list,
+  .detail-list {
     color: var(--surface);
     line-height: 1.6;
     margin: 0 0 1.5rem 1.25rem;
     padding-left: 1rem;
+  }
+  .detail-grid {
+    border-top: 1px solid rgba(236,223,210,0.2);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 2rem 0;
+    padding-top: 2rem;
+  }
+  .detail-section .bio {
+    color: var(--border);
+    margin-bottom: 1rem;
+  }
+  .detail-list {
+    color: var(--border);
+    margin-bottom: 0;
+  }
+  .detail-list li + li {
+    margin-top: 0.45rem;
   }
   h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--surface); }
   .services { list-style: none; margin-bottom: 1.5rem; }
@@ -72,6 +92,9 @@
     .card {
       width: calc(100% - 3rem);
     }
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
   }
   @media (max-width: 640px) {
     .about-hero {
@@ -93,6 +116,7 @@
     }
     .subtitle,
     .bio,
+    .detail-list,
     .services li,
     .socials a {
       font-size: 0.98rem;
@@ -121,7 +145,7 @@
   <div class="card">
     <div class="info-section">
       <h1>Hello again.</h1>
-      <p class="subtitle">I'm Sarah Sherman. <a href="assets/documents/projects/about/sherman_user_research_resume_2026-09-04.pdf" target="_blank" rel="noopener noreferrer">Here's my resume.</a></p>
+      <p class="subtitle">I'm Sarah Sherman. <a href="assets/documents/projects/about/sherman_ux_researcher_oct_2026.pdf" target="_blank" rel="noopener noreferrer">Here's my resume.</a></p>
       <p class="bio">
         I'm a UX researcher, even though the words 'researcher' or 'UX' have never appeared in my job titles. I do my best work when I'm talking to customers and learning about them.
       </p>
@@ -134,6 +158,35 @@
         <li>Who do you need to include across your org? I can do it, and I can keep the wheels moving. Pick a group and I've worked with them.</li>
         <li>I have the intangibles you need. I've worked in 100% remote, hybrid, and 100% in-office environments. I've worked on multilingual teams and across as many as six time zones. I can (and have) learned new industries and operating rhythms on the job, and have taught them to others. I can work with no money and no research tools at all, I can set up tools from scratch, or I can fit into existing systems.</li>
       </ul>
+      <div class="detail-grid">
+        <section class="detail-section" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <p class="bio">I can see the forest and the trees, and I take a practical approach.</p>
+          <ul class="detail-list">
+            <li>In-depth interviews (remote and in-person)</li>
+            <li>Generative and evaluative research</li>
+            <li>Moderated and unmoderated usability testing</li>
+            <li>Stakeholder interviews</li>
+            <li>Journey mapping and service blueprints</li>
+            <li>Research ops management, including screeners, recruitment, scheduling, incentive tracking, and remote setup</li>
+            <li>Remote, hybrid, multilingual, and multi-time-zone collaboration setups</li>
+          </ul>
+        </section>
+        <section class="detail-section" aria-labelledby="tools-heading">
+          <h2 id="tools-heading">Tools</h2>
+          <p class="bio">Here are the tools I've used lately. I'm learning new ones all the time. Check out my Personal Projects page for examples.</p>
+          <ul class="detail-list">
+            <li>UserTesting</li>
+            <li>UserInterviews</li>
+            <li>Dovetail</li>
+            <li>DataDog (analytics and RUM)</li>
+            <li>Jira</li>
+            <li>Confluence</li>
+            <li>Figma</li>
+          </ul>
+        </section>
+      </div>
+      <h2>Contact</h2>
       <p class="bio">
         Book a time on my Calendly or message me on LinkedIn. I'm excited to talk with you. Let's meet some customers, learn some things, and build great services.
       <br><br>I'm based in Washington, DC. All Calendly bookings will be in ET.

@@ -1,13 +1,80 @@
-::1 - - [12/Sep/2026 11:13:59] "GET / HTTP/1.1" 200 -
-::1 - - [12/Sep/2026 11:14:31] "GET / HTTP/1.1" 200 -
-::1 - - [12/Sep/2026 11:14:31] "GET /assets/images/projects/caribou/caribou%20mobile%20redesign.png HTTP/1.1" 304 -
-::1 - - [12/Sep/2026 11:14:35] "GET /personal-projects.html HTTP/1.1" 200 -
-::1 - - [12/Sep/2026 11:14:48] "GET / HTTP/1.1" 304 -
-::1 - - [12/Sep/2026 11:14:51] "GET /personal-projects.html HTTP/1.1" 304 -
-::1 - - [12/Sep/2026 11:16:29] "GET /personal-projects.html HTTP/1.1" 200 -
-::1 - - [12/Sep/2026 11:16:58] code 404, message File not found
-::1 - - [12/Sep/2026 11:16:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
-::1 - - [12/Sep/2026 11:21:16] "GET /personal-projects.html HTTP/1.1" 200 -
-::1 - - [12/Sep/2026 11:21:16] "GET /assets/images/projects/personal-projects/grocery_list_sept_12.png HTTP/1.1" 200 -
-::1 - - [12/Sep/2026 11:21:16] code 404, message File not found
-::1 - - [12/Sep/2026 11:21:16] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [05/Oct/2026 15:03:29] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:04:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:04:24] "GET /assets/css/site.css HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:04:24] "GET /assets/images/projects/caribou/caribou%20mobile%20redesign.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:04:24] "GET /assets/images/projects/oportun/1000006218.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:04:24] "GET /assets/images/projects/geico/GEICO_homepage_crop.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:04:24] "GET /assets/images/projects/personal-projects/grocery_list_sept_12.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:04:24] code 404, message File not found
+127.0.0.1 - - [05/Oct/2026 15:04:24] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [05/Oct/2026 15:09:28] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:09:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:09:54] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:09:56] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:10:30] "GET /assets/css/site.css HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:10:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:04] "HEAD /assets/css/site.css?v=palette-test-1 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:35] "GET /assets/css/site.css?v=palette-test-1 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:35] "GET /assets/images/projects/caribou/caribou%20mobile%20redesign.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:35] "GET /assets/images/projects/oportun/1000006218.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:35] "GET /assets/images/projects/personal-projects/grocery_list_sept_12.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:35] "GET /assets/images/projects/geico/GEICO_homepage_crop.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:36] code 404, message File not found
+127.0.0.1 - - [05/Oct/2026 15:11:36] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [05/Oct/2026 15:11:45] "GET /caribou.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:45] "GET /assets/css/site.css HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:45] "GET /assets/images/projects/caribou/Offer%20selection%20page%20-%20After.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:45] "GET /assets/images/projects/caribou/old%20v%20new%20systems.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:45] "GET /assets/images/projects/caribou/internal%20workflow%20obscured.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:45] "GET /assets/images/projects/caribou/LA%20Workflow%20as%20recipes.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:11:45] "GET /assets/images/projects/caribou/Offer%20selection%20page%20-%20Before.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:12:39] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:12:39] "GET /assets/css/site.css?v=palette-test-1 HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:12:46] "GET /assets/css/site.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:15:38] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:38] "GET /assets/css/site.css?v=palette-test-2 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:44] "GET /about.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:45] "GET /assets/css/site.css HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:45] "GET /assets/images/about/arboretum%20columns.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:47] "GET /assets/css/site.css?v=palette-test-2 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:48] "GET /personal-projects.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:49] "GET /assets/css/site.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:15:49] "GET /assets/images/projects/personal-projects/tasks%20tab.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:49] "GET /assets/images/projects/personal-projects/scheduled%20email.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:50] "GET /geico.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:50] "GET /assets/images/projects/geico/GEICO%20cover%20image.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:50] "GET /assets/images/projects/geico/coverages.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:50] "GET /assets/images/projects/geico/tooltip%20cropped.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:50] "GET /assets/gifs/projects/geico/contact_us_service_directory_trimmed.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:50] "GET /assets/gifs/projects/geico/chatbot_married_minus20s.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:51] "GET /assets/js/geico.js HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:52] "GET /oportun.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:52] "GET /assets/css/site.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:15:53] "GET /assets/images/projects/oportun/nma%201.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:53] "GET /assets/images/projects/oportun/nma%202.png HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:53] "GET /assets/images/projects/oportun/oportun_fruitvaleave_viagooglemaps.PNG HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:53] "GET /assets/images/projects/oportun/oportun_standalone_viagooglemaps.PNG HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:15:56] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:15:56] "GET /assets/css/site.css?v=palette-test-2 HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:15:58] "GET /assets/css/site.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:16:30] "GET /assets/css/site.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:16:30] code 404, message File not found
+127.0.0.1 - - [05/Oct/2026 15:16:30] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [05/Oct/2026 15:16:34] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:16:34] code 404, message File not found
+127.0.0.1 - - [05/Oct/2026 15:16:34] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [05/Oct/2026 15:16:34] "GET /assets/css/site.css?v=palette-test-2 HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:19:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:19:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:19:45] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:19:45] code 404, message File not found
+127.0.0.1 - - [05/Oct/2026 15:19:45] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [05/Oct/2026 15:19:45] "GET /assets/css/site.css?v=palette-test-2 HTTP/1.1" 304 -
+127.0.0.1 - - [05/Oct/2026 15:20:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:20:42] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [05/Oct/2026 15:20:42] code 404, message File not found
+127.0.0.1 - - [05/Oct/2026 15:20:42] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [05/Oct/2026 15:20:42] "GET /assets/css/site.css?v=palette-test-2 HTTP/1.1" 304 -
