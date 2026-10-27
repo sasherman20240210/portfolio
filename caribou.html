@@ -190,6 +190,14 @@
     color: var(--muted);
     line-height: 1.6;
   }
+  .approach-list {
+    color: var(--muted);
+    line-height: 1.6;
+    padding-left: 1.25rem;
+  }
+  .approach-list li + li {
+    margin-top: 0.5rem;
+  }
   .improvements-section {
     max-width: 1100px;
     margin: 2rem auto;
@@ -502,7 +510,7 @@
         <div class="case-link-content">
           <span class="label">Case Study 02</span>
           <h2>Sales Agent System</h2>
-          <p>Brought a new, workflow-based tool to the Caribou Sales floor. Iterations informed by continuous research reduced application delays by 13%</p>
+          <p>Brought a new, workflow-based tool to the Caribou sales floor. Iterations informed by continuous research reduced application delays by 13%.</p>
         </div>
       </a>
     </div>
@@ -539,25 +547,27 @@
           <div class="story-block">
             <h3>Context</h3>
             <p>
-              We had hypotheses on customer needs, and some background based on call listening, agent interviews, and session monitoring from DataDog, but needed research to prove or disprove those theories.
+              We had hypotheses on customer needs and some background based on call listening, agent interviews, and session monitoring from Datadog, but needed research to prove or disprove those theories.
             </p>
           </div>
           <div class="story-block">
             <h3>Challenge</h3>
             <p>
-              There are legal requirements that must be met in the fintech sector, which risks dense, intimidating digital experiences. We also had a number of research and design requests from our leadership, given the page's prominence. We needed to balance stakeholder needs, customer needs, and of course, budget and timeline.
+              There are legal requirements that must be met in the fintech sector, which can lead to dense, intimidating digital experiences. We also had a number of research and design requests from our leadership, given the page's prominence. We needed to balance stakeholder needs, customer needs, and of course, budget and timeline.
             </p>
           </div>
           <div class="story-block">
-            <h3>Approach</h3>
-            <p>
-              I zeroed in on learning what's most important to customers when they're shopping for a loan, along with evaluating designs for mobile-first. With our lead designer, I conducted live interviews, gave our users Figma prototypes, and evaluated three design options to click through.
-            </p>
+            <h3>Method</h3>
+            <ul class="approach-list">
+              <li>I zeroed in on learning what's most important to customers when they're shopping for a loan, along with evaluating mobile-first designs.</li>
+              <li>With our lead designer, I conducted live interviews.</li>
+              <li>I gave our users Figma prototypes and evaluated three design options to click through.</li>
+            </ul>
           </div>
           <div class="story-block">
             <h3>What Changed?</h3>
             <p>
-              Our users told us they wanted to be able to see a loan's key features right away, not just to save time, but because they hated that feeling they had at car dealerships - like they were being tricked. The design we chose showed key information about an offer, and highlighted 'superlative' offers. Now, they could see right away if we didn't have the offer they were looking for; we had been up front and they could move on.
+              Our users told us they wanted to be able to see a loan's key features right away, not just to save time, but because they hated that feeling they had at car dealerships - like they were being tricked. The design we chose showed key information about an offer and highlighted 'superlative' offers. Now, they could see right away if we didn't have the offer they were looking for; we had been upfront and they could move on.
             </p>
           </div>
         </div>
@@ -570,7 +580,7 @@
           <span class="eyebrow">Case Study 02</span>
           <h2>New Sales Agent System</h2>
           <p>
-            I can't provide images of Caribou's internal systems, but I can use silly diagrams and a metaphor or two. The existing system was intended for the power user, the admin, the all-seeing eye. A system like that is not imbuing the user with power. Instead, it overwhelms and confuses, throwing all the components of a recipe (but not the recipe itself) at them once and hoping they achieve the intended result. Users with a specific goal, like selling loans, need an actual recipe - a guide that leads you to a successful end result.
+            I can't provide images of Caribou's internal systems, but I can use silly diagrams and a metaphor or two. The existing system was intended for the power user, the admin, the all-seeing eye. A system like that is not imbuing the user with power. Instead, it overwhelms and confuses, throwing all the components of a recipe (but not the recipe itself) at them all at once and hoping they achieve the intended result. Users with a specific goal, like selling loans, need an actual recipe - a guide that leads you to a successful end result.
           </p>
         </div>
         <div class="evidence-grid">
@@ -613,10 +623,14 @@
             </p>
           </div>
           <div class="story-block">
-            <h3>Approach</h3>
-            <p>
-              First, I needed to figure out what the actual workflow was - what did the agent actually do on their calls? What did they absolutely need in their system, and what was 'corporate folklore', as we called it? I also needed to find out where our system was failing its users. Where were errors getting through because there was no field-level validation, no alerts that a step needed to be completed before moving on to the next?
-            </p>
+            <h3>Method</h3>
+            <ul class="approach-list">
+              <li>I needed to figure out the actual workflow: what agents did on their calls and what they absolutely needed in their system. I conducted ongoing discovery with operations leadership and floor managers to understand the necessary steps and how the existing system worked to enable and block agents.</li>
+              <li>I attended daily stand-up meetings with engineering and created a product brief (PRD), research strategy, and complete research plan, then managed all aspects of product development and research.</li>
+              <li>I conducted hour-long discovery interviews with 5 sales agents, then conducted periodic testing with those 5 agents as we built the system.</li>
+              <li>Post-launch, I conducted daily retrospectives with floor managers to collect feedback on the system.</li>
+              <li>All feedback was captured in tickets, prioritized, and scheduled for work with the engineering and operations teams. Tickets were categorized as bugs, quality-of-life improvements, and new features.</li>
+            </ul>
           </div>
           <div class="story-block">
             <h3>What Changed?</h3>

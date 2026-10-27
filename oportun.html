@@ -127,8 +127,9 @@
   }
   .case-index {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+    align-items: stretch;
     margin-top: 1.5rem;
   }
   .case-link-card {
@@ -138,7 +139,7 @@
     box-shadow: 0 8px 26px rgba(8,24,73,0.14);
     color: var(--text);
     display: grid;
-    gap: 1rem;
+    grid-template-rows: 260px 1fr;
     overflow: hidden;
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -155,7 +156,7 @@
     padding: 1rem;
   }
   .case-link-content {
-    padding: 0 1.25rem 1.25rem;
+    padding: 1rem 1.25rem 1.25rem;
   }
   .case-link-card .label,
   .section-label {
@@ -226,6 +227,14 @@
   .story-block p {
     color: var(--muted);
     line-height: 1.6;
+  }
+  .approach-list {
+    color: var(--muted);
+    line-height: 1.6;
+    padding-left: 1.25rem;
+  }
+  .approach-list li + li {
+    margin-top: 0.5rem;
   }
   .research-section {
     max-width: 1100px;
@@ -404,12 +413,11 @@
     }
     .case-study-hero,
     .story-grid,
-    .case-index,
     .evidence-feature {
       grid-template-columns: 1fr;
     }
-    .case-link-card img {
-      height: 320px;
+    .case-index {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .device-frame {
       height: 360px;
@@ -455,11 +463,11 @@
     .comparison-grid {
       grid-template-columns: 1fr;
     }
+    .case-index {
+      grid-template-columns: 1fr;
+    }
     .device-frame {
       height: 300px;
-    }
-    .case-link-card img {
-      height: 260px;
     }
     .story-grid,
     .research-section {
@@ -519,6 +527,14 @@
           <p>Conduct interviews at Oportun stores to understand customer and staff perspectives on a new type of loan offering, to inform strategy and successful product launch. Pictured above, the Fruitvale Ave location in Oakland, CA</p>
         </div>
       </a>
+      <a class="case-link-card" href="#savings-product-controls">
+        <img src="assets/images/projects/oportun/rainy day.png" alt="Rainy Day savings balance with Add money and Withdraw controls">
+        <div class="case-link-content">
+          <span class="label">Case Study 03</span>
+          <h2>Savings Product Controls</h2>
+          <p>Two concurrent research efforts evaluating Oportun's Savings product, to understand the success of existing functionality and explore new features.</p>
+        </div>
+      </a>
     </div>
   </section>
   <main>
@@ -573,15 +589,18 @@
             </p>
           </div>
           <div class="story-block">
-            <h3>Approach</h3>
-            <p>
-              I wanted to speak to customers about what they would really need our app for - need, not want. I kept my script a little loose, since I would have no visual aids as a support. For our usertesting.com group, we had clickable prototypes to evaluate once we had a feature set from our customers. I also conducted internal stakeholder interviews, to make sure they were heard as well.  
-            </p>
+            <h3>Method</h3>
+            <ul class="approach-list">
+              <li>I had one month to conduct phone interviews with current customers, calls with store managers, then run unmoderated usability tests on prototypes we developed.</li>
+              <li>I conducted 10 customer phone calls to get to a critical feature set.</li>
+              <li>Three store managers explained how they interacted with customers when breaking down a payment, and what information was most critical. This informed early design iterations.</li>
+              <li>The customer phone calls were followed up by 12 unmoderated usability tests on 2 clickable prototypes.</li>
+            </ul>
           </div>
           <div class="story-block">
             <h3>What Changed?</h3>
             <p>
-              Customers told us they wanted (and would expect) autopay, like any other bank. They would also want to pay on demand when they needed to, or send a payment from any bank account. Oportun customers frequently pay in person, and they also shift money between bank accounts to manage their expenses. They need flexibility when they make their loan payments. Our prototype testing showed us how we could adjust our language and navigation better.
+              Customers told us they expected flexibility in payment methods. They pay in person, they switch bank accounts to manage their expenses, and they also use autopay. One tested prototype was an overwhelming winner. As advised by our store managers and customers, it illustrated payments just like our receipts (principal + interest + fees = total payment). We also had a clear toggle for autopay and displayed it, along with autopay status, on our landing page.
             </p>
           </div>
         </div>
@@ -623,10 +642,13 @@
             </p>
           </div>
           <div class="story-block">
-            <h3>Approach</h3>
-            <p>
-              I arranged visits with three store managers, who knew their customers well enough to arrange interviews. Many customers came in to make loan payments once a month, and had good relationships with the staff. We could spend half an hour to an hour chatting about their experiences. We came away with not just their perceptions of the loan product, but a look into their daily lives.
-            </p>
+            <h3>Method</h3>
+            <ul class="approach-list">
+              <li>I arranged visits to three different California stores by coordinating with store managers, to speak to 5 customers at each store.</li>
+              <li>Managers identified customers who came in to make payments every month, and coordinated in-person conversations.</li>
+              <li>We spent up to an hour chatting with customers about their experiences with loans, with Oportun, and about their perceptions of this new product.</li>
+              <li>Interview data was reviewed for patterns and themes, and key moments were presented along with final recommendations.</li>
+            </ul>
           </div>
           <div class="story-block">
             <h3>What Changed?</h3>
@@ -655,6 +677,52 @@
         </div>
       </div>
       -->
+    </div>
+    <div class="case-band" id="savings-product-controls">
+      <section class="research-section">
+        <div class="research-intro">
+          <span class="eyebrow">Case Study 03</span>
+          <h2>Savings Product Controls</h2>
+          <p>
+            I ran two concurrent projects from Q4 2022 to Q2 2023. We suspected that overdraft reimbursements, costing Oportun nearly $7000 per month at the time, could be decreased by improving the usability of automated savings features. My task was to understand customer behaviors, how our designs influenced those behaviors, and what we could do to make progress towards our goal of reducing overdraft reimbursement costs by 10%.
+          </p>
+        </div>
+        <div class="evidence-feature">
+          <article class="evidence-card">
+            <span class="label">Automated Savings</span>
+            <div class="map-frame">
+              <img src="assets/images/projects/oportun/Screenshot 2026-10-26 204600.png" alt="Oportun Set & Save app screen announcing an automatic savings deposit">
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="story-grid">
+        <div class="story-panel">
+          <span class="section-label">Savings Product Studies</span>
+          <h2>In Depth</h2>
+          <div class="story-block">
+            <h3>Context</h3>
+            <p>Oportun faced almost $7000 per month in overdraft reimbursement fees, incurred when customers had an automated withdrawal below a ‘safe savings level’ that triggered an overdraft fee on their bank account. We needed to reduce the amount of these fees, along with customer complaints, by studying and improving available in-app controls. Our target was reducing reimbursements by 10%, to $6300 per month.</p>
+          </div>
+          <div class="story-block">
+            <h3>Challenge</h3>
+            <p>I needed to develop deep product knowledge, create and execute a complete research strategy that would identify the pain points users were facing, then recommend improvements to our Savings product to meet our target success metric. My strategy covered two efforts from Q4 2022 (discovery) to Q2 2023 (final recommendations), and included coordination with product, design, and analytics to enable rapid prototyping and A/B testing.</p>
+          </div>
+          <div class="story-block">
+            <h3>Method</h3>
+            <ul class="approach-list">
+              <li>Review of 212 Zendesk support tickets for existing pain points</li>
+              <li>Discovery interviews; 10 participants</li>
+              <li>Unmoderated usability testing; 20 participants (customers and non-customers)</li>
+              <li>Prototype testing; 3 rounds, 10 participants per round. Evaluated exploratory prototypes, terminology, and a final prototype</li>
+            </ul>
+          </div>
+          <div class="story-block">
+            <h3>What Changed?</h3>
+            <p>I found that users who experienced an unexpected automated withdrawal didn't know how to change these controls, or found the names of the controls confusing and as a result, left defaults in place. I tested alternate terminology and designs, and recommended updates like using language that users expected, instead of existing language that was friendly for branding. 'Minimum bank balance' was easy to interpret; 'safe savings level' was not. We also added helper text and an FAQ, which weren't linked but were available on oportun.com - an easy win.</p>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 </body>
